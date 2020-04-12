@@ -2,7 +2,7 @@ package Elements;
 
 import Utils.TestDataReader;
 import Utils.TestProperties;
-import lombok.extern.log4j.Log4j;
+//import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-//@Log4j
+////@Log4j
 public abstract class UIElement {
     private final By by;
     private final WebDriverWait wait;
@@ -98,7 +98,7 @@ public abstract class UIElement {
         waitEverythingIsLoaded();
         scrollToElement();
         String result = getElement().getText();
-        //log.debug(result);
+        ////log.debug(result);
         return result;
     }
 
@@ -106,7 +106,7 @@ public abstract class UIElement {
         waitPageIsLoaded();
         waitForElementPresents();
         String value = getElement().getAttribute(attribute).trim();
-        //log.debug(value);
+        ////log.debug(value);
         return value;
     }
 
@@ -114,7 +114,7 @@ public abstract class UIElement {
     protected void scrollToElement() {
         JavascriptExecutor je = (JavascriptExecutor) driver;
         long windowHeight = (Long) je.executeScript("return window.innerHeight");
-        //log.debug("Inner height " + windowHeight);
+        ////log.debug("Inner height " + windowHeight);
         // Element position before scroll
         Point p1 = getElement().getLocation();
         je.executeScript("arguments[0].scrollIntoView();", getElement());
@@ -152,7 +152,7 @@ public abstract class UIElement {
         waitPageIsLoaded();
         waitForElementPresents();
         boolean isDisplayed = getElement().isDisplayed();
-        //log.info("Element is displayed " + isDisplayed);
+        ////log.info("Element is displayed " + isDisplayed);
         return isDisplayed;
     }
 
@@ -173,7 +173,7 @@ public abstract class UIElement {
     public boolean isNotDisplayed() {
         boolean isNotVisible;
         isNotVisible = !isPresents() || !isDisplayed();
-        //log.info("Element is not displayed " + isNotVisible);
+        ////log.info("Element is not displayed " + isNotVisible);
         return isNotVisible;
     }
 

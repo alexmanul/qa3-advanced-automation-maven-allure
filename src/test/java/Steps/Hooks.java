@@ -1,5 +1,6 @@
 package Steps;
 
+import MYSQL.SQLHelper;
 import Utils.CommonApproach.Pages;
 import Utils.DriverSingleton;
 import Utils.Screenshots;
@@ -10,6 +11,11 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class Hooks {
     static String featureName;
     static String scenarioName;
@@ -17,6 +23,7 @@ public class Hooks {
     private WebDriver driver;
     private ExtentReports extent;
     private Screenshots screen;
+    final SQLHelper sqlHelper = new SQLHelper();
 
     @Before
     public void before(Scenario scenario) {
@@ -35,5 +42,21 @@ public class Hooks {
         extent.endTest(extentTest);
         extent.flush();
         DriverSingleton.destroySingletonInstance();
+    }
+
+    @After("@DropDBTableAgents")
+    public void dropDBTableAgents() throws IOException, SQLException {
+        String query = "DROP TABLE AGENTS";
+        Connection connection = sqlHelper.createConnection();
+        Statement statement = connection.createStatement();
+        statement.executeUpdate(query);
+        //log.info("Database is dropped");
+        connection.close();
+    }
+
+    @Before("@CreateDBTableAgents")
+    public void createDBTableAgents() throws IOException, SQLException {
+        sqlHelper.readSQLFromFile();
+        //log.info("Database table 'AGENTS' is created");
     }
 }

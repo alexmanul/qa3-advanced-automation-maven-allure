@@ -2,7 +2,7 @@ package Utils;
 
 import Utils.InternalClasses.CustomDate;
 import com.google.gson.Gson;
-import lombok.extern.log4j.Log4j;
+//import lombok.extern.log4j.Log4j;
 import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -23,7 +23,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.UUID;
 
-//@Log4j
+////@Log4j
 public class Utils {
 
     public static String getSpecificDate(String date) {
@@ -40,7 +40,7 @@ public class Utils {
 
     public static String convertAmount(String amount) {
         String result = String.format(Locale.UK, "%,.2f", Double.valueOf(amount)).replaceAll(",", " ");
-        //log.debug("Converted amount is " + result);
+        ////log.debug("Converted amount is " + result);
         return result;
 
     }
@@ -81,7 +81,7 @@ public class Utils {
                     .replaceAll("\\s+", "")
                     .replaceAll("\u00a0", " ")
             ));
-            //log.debug("Converted amount is " + result);
+            ////log.debug("Converted amount is " + result);
         }
         return result;
     }
@@ -108,7 +108,7 @@ public class Utils {
     public File renameFile(String pathToFile, String oldName, String newName) {
         File file = new File(pathToFile + oldName);
         file.renameTo(new File(pathToFile + newName));
-        //log.debug("Renamed file is " + file);
+        ////log.debug("Renamed file is " + file);
         return file;
     }
 
@@ -127,7 +127,7 @@ public class Utils {
         SecureRandom random = new SecureRandom();
         int num = random.nextInt(10000);
         String result = String.format("%05d", num);
-        //log.debug("Result is " + result);
+        ////log.debug("Result is " + result);
         return result;
     }
 

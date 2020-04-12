@@ -6,7 +6,7 @@ import Pages.S101RegistrationPage;
 import Steps.BaseSteps;
 import Utils.DriverSingleton;
 import Utils.TestProperties;
-import lombok.extern.log4j.Log4j;
+//import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.HashMap;
 import java.util.Map;
 
-//@Log4j
+////@Log4j
 public class Pages extends BaseSteps {
     private final static String MENU = "MENU";
     private final static String P100 = "P100";
@@ -38,7 +38,7 @@ public class Pages extends BaseSteps {
     }
 
     public static BasePage getCachedPageObject(String page) throws Exception {
-        //log.debug("Cached pages count is " + cache.size());
+        ////log.debug("Cached pages count is " + cache.size());
         if (!cache.containsKey(page)) {
             getPageObjectForSpecificPage(page);
         }
@@ -46,7 +46,7 @@ public class Pages extends BaseSteps {
     }
 
     public static void clearCache() {
-        //log.debug("Clearing cache");
+        ////log.debug("Clearing cache");
         cache.clear();
     }
 
