@@ -15,7 +15,6 @@
         <aspectj.version>1.9.1</aspectj.version>
         <allure.version>2.13.1</allure.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- https://maven.apache.org/general.html#special-characters-site -->
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
@@ -134,7 +133,6 @@
             <version>3.141.59</version>
         </dependency>
 
-
         <dependency>
             <groupId>com.lmax</groupId>
             <artifactId>disruptor</artifactId>
@@ -148,6 +146,20 @@
             <version>2.10.3</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.3.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.10.7</version>
+        </dependency>
 
     </dependencies>
 
