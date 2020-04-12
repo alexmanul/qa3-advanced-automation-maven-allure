@@ -30,7 +30,8 @@ public class TestDataReader extends BaseSteps {
         JSONObject jsonObject = null;
         String testDataRelativePath = getTestDataSourceFileName();
         try {
-            jsonObject = new JSONObject(new String(Files.readAllBytes(Paths.get(testDataRelativePath))));
+            byte[] data = Files.readAllBytes(Paths.get(testDataRelativePath));
+            jsonObject = new JSONObject(new String(data, "UTF-8"));
         } catch (Exception e) {
             //log.error("Test data json file is not found");
         }
