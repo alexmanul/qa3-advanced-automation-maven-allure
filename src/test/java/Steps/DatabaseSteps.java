@@ -5,7 +5,6 @@ import MYSQL.SQLQueryCatalog;
 import Utils.TestProperties;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
-//import lombok.extern.log4j.Log4j;
 import org.apache.ibatis.jdbc.ScriptRunner;
 
 import java.io.BufferedReader;
@@ -20,6 +19,8 @@ import java.util.List;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
+
+//import lombok.extern.log4j.Log4j;
 
 ////@Log4j
 public class DatabaseSteps {
