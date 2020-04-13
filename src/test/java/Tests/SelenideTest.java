@@ -4,8 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.Test;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.*;
 
 
 public class SelenideTest {
@@ -17,6 +16,7 @@ public class SelenideTest {
         Configuration.browserSize = "360x720";
         open("https://www.ss.lv");
         sleep(500);
+        closeWindow();
     }
 
     @Test
@@ -26,6 +26,7 @@ public class SelenideTest {
         Configuration.browserSize = "600x800";
         open("https://www.1a.lv");
         sleep(500);
+        closeWindow();
     }
 
 }
