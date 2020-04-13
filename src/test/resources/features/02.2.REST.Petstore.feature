@@ -31,20 +31,20 @@ Feature: QA3 - Advanced Automation. REST. Swagger Petstore
 	  | name     | <NAME>     |
 
 	Examples:
-	  | ID | NAME   |
-	  | 5  | duck   |
-	  | 3  | doggie |
+	  | ID | NAME      |
+	  | 5  | King Kong |
 
   @API @SmokeTest
   Scenario Outline: SWG02. User can create, update and delete pet information
-	When I create pet information with name '<NAME>' and '<ID>' id
+	When I create pet information with 'available' status, '<NAME>' name and '<ID>' id
 	And I delete pet information by '<ID>' id
 	And I verify response status code is '200'
 	And I get pet information by '<ID>' id
 	And I verify response status code is '404'
-	And I create pet information with name '<NAME>' and '<ID>' id
+	And I create pet information with 'available' status, '<NAME>' name and '<ID>' id
 	And I update pet information by '<ID>' id with next values
 	  | JSON_KEY | JSON_VALUE |
+	  | id       | <ID>       |
 	  | status   | <STATUS>   |
 	Then I verify pet information by '<ID>' id contains values
 	  | JSON_KEY | JSON_VALUE |

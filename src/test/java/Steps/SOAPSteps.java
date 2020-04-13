@@ -1,6 +1,6 @@
 package Steps;
 
-import Utils.SOAPHelper;
+import Utils.Helpers.SOAPHelper;
 import io.cucumber.java.en.And;
 
 public class SOAPSteps {

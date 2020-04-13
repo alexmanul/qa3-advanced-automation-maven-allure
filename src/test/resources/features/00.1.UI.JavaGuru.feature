@@ -1,5 +1,5 @@
-@SmokeTest
-Feature: Tests for JavaGuru website. Common elements
+@UI @SmokeTest
+Feature: QA3 - Advanced Automation. Tests for JavaGuru website
 
   @UI
   Scenario: 000. Check redirection by registration button

@@ -27,15 +27,15 @@ public class PetstoreSteps {
         response = given().get(PETSTORE_API + "v2/pet/" + id);
     }
 
-    @And("I create pet information with name '(.*)' and '(.*)' id")
-    public void createPetInformationByIDId(String name, int id) {
+    @And("I create pet information with '(.*)' status, '(.*)' name and '(.*)' id")
+    public void createPetInformationByIDId(String status, String name, int id) {
         RequestSpecification httpRequest = RestAssured.given();
         httpRequest.header("Content-Type", "application/json");
 
         JsonObject newPet = new JsonObject();
         newPet.addProperty("id", id);
         newPet.addProperty("name", name);
-        newPet.addProperty("status", "available");
+        newPet.addProperty("status", status);
         httpRequest.body(newPet.toString());
         response = httpRequest.post(PETSTORE_API + "v2/pet/");
         response.then().statusCode(200);
@@ -82,7 +82,9 @@ public class PetstoreSteps {
             pet.addProperty(key, value);
         }
         httpRequest.body(pet.toString());
-        //log.info(httpRequest.body(pet.toString()));
+
+        System.out.println(httpRequest.body(pet.toString()));
+//        log.info(httpRequest.body(pet.toString()));
 
         response = httpRequest.put(PETSTORE_API + "v2/pet/");
         response.then().statusCode(200);

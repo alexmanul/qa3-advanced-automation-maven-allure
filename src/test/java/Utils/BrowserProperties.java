@@ -46,6 +46,7 @@ public class BrowserProperties extends DesiredCapabilities {
         desiredCapabilities.setCapability("browserName", System.getProperty("browser"));
         desiredCapabilities.setCapability("version", "");
         desiredCapabilities.setCapability("platform", "");
+//        desiredCapabilities.setCapability("platform", "Headless");
     }
 
 }

@@ -1,4 +1,4 @@
-package Utils;
+package Utils.Helpers;
 
 import org.apache.http.HttpResponse;
 
