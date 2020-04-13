@@ -19,7 +19,7 @@ Feature: QA3 - Advanced Automation. Database with background
   Background:
 	Given I create 'AGENTS' table in database
 
-  @DropDBTableAgents
+  @DB @DropDBTableAgents
   Scenario: DB01. Add and remove data - change agent data
 	When I update 'AGENTS' table entity with 'Mukesh' agent name with new values
 	  | TABLE_KEY    | NEW_VALUE    |

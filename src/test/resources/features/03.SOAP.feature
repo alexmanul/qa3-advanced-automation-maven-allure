@@ -1,6 +1,7 @@
 @SOAP
 Feature: QA3 - Advanced Automation. SOAP
 
+  @API
   Scenario Outline: SOAP01. User can send SOAP request and validate response
 	When I send SOAP request to '<URL>' url with body
 	"""

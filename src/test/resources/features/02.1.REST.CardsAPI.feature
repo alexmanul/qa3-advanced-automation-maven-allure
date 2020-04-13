@@ -10,9 +10,9 @@ Feature: QA3 - Advanced Automation. REST
 #  Lets get deck id from the first test and a card from a deck
 #  Validate the card parameters
 #  Validate that deck amount is 51 now
-  @SmokeTest
+  @API @SmokeTest
   Scenario: REST01. Creates new creates another deck and validates deck are unique
-    When I shuffle a deck
-    And I validate that deck has all parameters
-    And I shuffle another deck
-    Then I validate that deck is unique
+	When I shuffle a deck
+	And I validate that deck has all parameters
+	And I shuffle another deck
+	Then I validate that deck is unique

@@ -1,6 +1,7 @@
 @SELENIDE
 Feature: QA3 - Advanced Automation. Selenide
 
+  @UI
   Scenario Outline: SLN01. User can set browser properties and navigate to URL
 	When I set following properties and navigate to '<URL>' url
 	  | KEY        | VALUE      |

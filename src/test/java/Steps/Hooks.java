@@ -20,15 +20,14 @@ public class Hooks {
     static String featureName;
     static String scenarioName;
     private static ExtentTest extentTest;
+    final SQLHelper sqlHelper = new SQLHelper();
     private WebDriver driver;
     private ExtentReports extent;
-    private Screenshots screen;
-    final SQLHelper sqlHelper = new SQLHelper();
 
-    @Before
+    @Before("@UI")
     public void before(Scenario scenario) {
         driver = DriverSingleton.getInstance();
-        screen = new Screenshots();
+        Screenshots screen = new Screenshots();
         scenarioName = screen.getNameOfScenario(scenario);
         featureName = screen.getNameOfFeature(scenario);
         extent = DriverSingleton.getExtent();
@@ -37,7 +36,7 @@ public class Hooks {
         Pages.setWebDriverAndWait();
     }
 
-    @After
+    @After("@UI")
     public void tearDown(Scenario scenario) {
         extent.endTest(extentTest);
         extent.flush();
