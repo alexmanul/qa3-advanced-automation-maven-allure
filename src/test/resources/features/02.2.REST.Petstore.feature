@@ -23,7 +23,8 @@ Feature: QA3 - Advanced Automation. REST. Swagger Petstore
 
   @API @SmokeTest
   Scenario Outline: SWG01. User can get pet information
-	When I get pet information by '<ID>' id
+	When I create pet information with 'available' status, '<NAME>' name and '<ID>' id
+	And I get pet information by '<ID>' id
 	And I verify response status code is '200'
 	Then I verify pet information by '<ID>' id contains values
 	  | JSON_KEY | JSON_VALUE |
@@ -31,8 +32,8 @@ Feature: QA3 - Advanced Automation. REST. Swagger Petstore
 	  | name     | <NAME>     |
 
 	Examples:
-	  | ID | NAME      |
-	  | 5  | King Kong |
+	  | ID | NAME  |
+	  | 5  | Shark |
 
   @API @SmokeTest
   Scenario Outline: SWG02. User can create, update and delete pet information
