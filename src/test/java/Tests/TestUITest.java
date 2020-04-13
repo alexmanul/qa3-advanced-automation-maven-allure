@@ -18,7 +18,7 @@ public class TestUITest {
 
     @Test
     public void TEST_TESTUI_01() {
-        androidAppPath = "src/test/resources/app/LoginApp.apk";
+        androidAppPath = "src/test/resources/App/LoginApp.apk";
         open();
 
 //       E(By.id("textInputEditTextEmail")).
@@ -29,8 +29,8 @@ public class TestUITest {
 //                .untilIsVisible()
 //                .then()
 //                .getMobileElement()
-//
-//
+
+
 //        MobileElement find2 = (MobileElement) E(By.id("textInputEditTextPassword"))
 //                .given().waitFor(5).untilIsVisible().then().setValueJs("myemail@email.com");
 
@@ -42,8 +42,8 @@ public class TestUITest {
 //        driver.HideKeyboard();
     }
 
-//    @Test
-//    public void TEST_TESTUI_02() {
-//        open("https://ru.aliexpress.com/");
-//    }
+    @Test
+    public void TEST_TESTUI_02() {
+        open("https://ru.aliexpress.com/");
+    }
 }

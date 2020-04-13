@@ -69,7 +69,7 @@ public class TestDataReader extends BaseSteps {
         test.add("src");
         test.add("test");
         test.add("resources");
-        test.add("testData");
+        test.add("TestData");
         test.add(folder);
         test.add(file);
         String result = String.join(File.separator, test);
