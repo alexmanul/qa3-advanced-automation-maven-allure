@@ -2,7 +2,7 @@
 Feature: QA3 - Advanced Automation. Tests for JavaGuru website
 
   @UI
-  Scenario: 000. Check redirection by registration button
+  Scenario: UI00. Check redirection by registration button
 	When I navigate to JAVAGURU.LV website
 	And I see 'MENU_JAVAGURU_LOGO' element on the 'P100' page
 	And I click on 'P100_REGISTER_BUTTON' element on the 'P100' page
@@ -18,7 +18,7 @@ Feature: QA3 - Advanced Automation. Tests for JavaGuru website
 	And I see text '@/REGISTER/RU/TITLE' for 'P101_SCREEN_TITLE' element on the 'P101' page
 
   @UI
-  Scenario: 001. Check RU portal version - header, menu, footer elements
+  Scenario: UI01. Check RU portal version - header, menu, footer elements
 	When I navigate to JAVAGURU.LV website
 	Then I see following elements on the 'P100' page
 	  | ELEMENT                | LABEL                  |
@@ -49,7 +49,7 @@ Feature: QA3 - Advanced Automation. Tests for JavaGuru website
 	  | FOOTER_ICON_LINKEDIN   |                        |
 
   @UI
-  Scenario: 002. Check RU portal version - menu EXPAND
+  Scenario: UI02. Check RU portal version - menu EXPAND
 	When I navigate to JAVAGURU.LV website
 	Then I see following elements on the 'P100' page
 	  | ELEMENT               | LABEL                  |
