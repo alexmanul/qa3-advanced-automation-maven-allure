@@ -16,6 +16,7 @@
         <allure.version>2.13.1</allure.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <fork.count>5</fork.count>
     </properties>
 
     <repositories>
@@ -196,12 +197,12 @@
             <version>7.3.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.github.testdevlab</groupId>
-            <artifactId>TestUI</artifactId>
-            <version>master-SNAPSHOT</version>
-        </dependency>
-
+        <!--       <dependency>
+                 <groupId>com.github.testdevlab</groupId>
+                 <artifactId>TestUI</artifactId>
+                 <version>master-SNAPSHOT</version>
+             </dependency>
+        -->
         <!-- https://mvnrepository.com/artifact/com.github.tomakehurst/wiremock -->
         <dependency>
             <groupId>com.github.tomakehurst</groupId>

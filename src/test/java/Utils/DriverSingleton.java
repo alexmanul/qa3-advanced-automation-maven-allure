@@ -2,7 +2,6 @@ package Utils;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-//import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -12,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-////@Log4j
+//@Log4j
 public class DriverSingleton {
     private static RemoteWebDriver driver;
     private static ExtentReports extent;
@@ -33,12 +32,12 @@ public class DriverSingleton {
             extentTestDictionary = new HashMap<String, ExtentTest>();
 
             driver.manage().window().maximize();
-            driver.manage().timeouts()
-                    .implicitlyWait(Integer.parseInt(TestProperties.getProperty("selenium.implicit.wait")), TimeUnit.SECONDS);
-            driver.manage().timeouts()
-                    .pageLoadTimeout(Integer.parseInt(TestProperties.getProperty("selenium.page.wait")), TimeUnit.SECONDS);
-            driver.manage().timeouts()
-                    .setScriptTimeout(Integer.parseInt(TestProperties.getProperty("selenium.js.wait")), TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait
+                    (Integer.parseInt(TestProperties.getProperty("selenium.implicit.wait")), TimeUnit.SECONDS);
+            driver.manage().timeouts().pageLoadTimeout
+                    (Integer.parseInt(TestProperties.getProperty("selenium.page.wait")), TimeUnit.SECONDS);
+            driver.manage().timeouts().setScriptTimeout
+                    (Integer.parseInt(TestProperties.getProperty("selenium.js.wait")), TimeUnit.SECONDS);
 
             printOutBrowserInfo();
             printSessionID();
@@ -80,17 +79,16 @@ public class DriverSingleton {
 
     private static void printOutBrowserInfo() {
         Capabilities capabilities = driver.getCapabilities();
-        ////log.info("Browser: " + capabilities.getBrowserName());
-        ////log.info("Browser version: " + capabilities.getVersion());
-        ////log.info("Browser platform: " + capabilities.getPlatform());
+        //log.info("Browser: " + capabilities.getBrowserName());
+        //log.info("Browser version: " + capabilities.getVersion());
+        //log.info("Browser platform: " + capabilities.getPlatform());
     }
 
     private static void printSessionID() {
-        ////log.info("Session ID: " + getInstance().getSessionId());
+        //    log//.("Session ID: " + getInstance().getSessionId());
     }
 
     public static String getSeleniumGridURL() {
-
         return TestProperties.getProperty("selenium.grid.local");
     }
 }

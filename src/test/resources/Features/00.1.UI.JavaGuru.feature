@@ -31,9 +31,9 @@ Feature: QA3 - Advanced Automation. Tests for JavaGuru website
 	  | MENU_ABOUT_US_OPTION   | @/MENU/RU/ABOUT_US     |
 	  | HEADER_EMAIL_LABEL     |                        |
 	  | HEADER_PHONE_LABEL     |                        |
+#	  | HEADER_QUESTION_BUTTON | @/HEADER/RU/QUESTION   |
 	  | HEADER_MOODLE_BUTTON   | @/HEADER/RU/MOODLE     |
 	  | HEADER_LANGUAGE_BUTTON | @/HEADER/RU/LANGUAGE   |
-#	  | HEADER_QUESTION_BUTTON | @/HEADER/RU/question   |
 	  | HEADER_ICON_FACEBOOK   |                        |
 	  | HEADER_ICON_LINKEDIN   |                        |
 	  | FOOTER_ADDRESS_ICON    |                        |

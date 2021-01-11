@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseSteps {
 
-//    public final WebDriver driver = DriverSingleton.getInstance();
     public final WebDriver driver = DriverSingleton.getInstance();
     public final WebDriverWait wait = new WebDriverWait(driver, Integer.parseInt(TestProperties.getProperty("selenium.explicit.wait")));
     protected String featureName = Hooks.featureName;
