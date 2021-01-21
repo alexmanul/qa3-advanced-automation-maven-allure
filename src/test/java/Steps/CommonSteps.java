@@ -6,9 +6,8 @@ import Elements.RadioButton;
 import Elements.UIElement;
 import Pages.BasePage;
 import Pages.S100MainPage;
-import Utils.CommonApproach.IdentificatorReader;
+import Utils.CommonApproach.ElementReader;
 import Utils.CustomAssertions;
-
 import io.cucumber.core.api.Scenario;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -31,11 +30,11 @@ public class CommonSteps extends BaseSteps {
 
     @And("^I see expected result by executing '(.*)' method on the '(.*)' page$")
     public void ISeeExpectedResultByExecutingMethod(String method, String page) throws Exception {
-        new IdentificatorReader(page).executeMethod(method);
+        new ElementReader(page).executeMethod(method);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////// NAVIGATION //////////////////////////////////////////////////////
+    ///// NAVIGATION ///////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @And("^I navigate to JAVAGURU.LV website$")
@@ -67,25 +66,25 @@ public class CommonSteps extends BaseSteps {
 
     @And("^I see '(.*)' element on the '(.*)' page$")
     public void ISeeElementOnThePage(String element, String page) throws Exception {
-        new IdentificatorReader(page).getUIElement(element, UIElement.class).isDisplayed();
+        new ElementReader(page).getUIElement(element, UIElement.class).isDisplayed();
     }
 
     @And("^I do not see '(.*)' element on the '(.*)' page$")
     public void IDoNotSeeElementOnThePage(String title, String page) throws Exception {
-        new IdentificatorReader(page).getUIElement(title, UIElement.class).isNotDisplayed();
+        new ElementReader(page).getUIElement(title, UIElement.class).isNotDisplayed();
     }
 
     // EQUALS
 
     @And("^I see text '(.*)' for '(.*)' element on the '(.*)' page$")
     public void ISeeTextForElementOnThePage(String text, String element, String page) throws Exception {
-        CustomAssertions.assertThatEquals(new IdentificatorReader(page).getUIElement(element, UIElement.class).getValue(),
+        CustomAssertions.assertThatEquals(new ElementReader(page).getUIElement(element, UIElement.class).getValue(),
                 text, "Element " + element + " text is wrong");
     }
 
     @And("^I see text '(.*)' for element by '(.*)' number on the '(.*)' page$")
     public void ISeeTextForElementByNumberOnThePage(String text, int number, String element, String page) throws Exception {
-        CustomAssertions.assertThatEquals(new IdentificatorReader(page).getUIElementWithVariables(element, UIElement.class, number).getValue(),
+        CustomAssertions.assertThatEquals(new ElementReader(page).getUIElementWithVariables(element, UIElement.class, number).getValue(),
                 text, "Text is wrong for element " + element + " and index " + number);
     }
 
@@ -93,13 +92,13 @@ public class CommonSteps extends BaseSteps {
 
     @And("^I see text for '(.*)' element contains text '(.*)' on the '(.*)' page$")
     public void ISeeTextForElementContainsTextOnThePage(String element, String text, String page) throws Exception {
-        CustomAssertions.assertThatContains(new IdentificatorReader(page).getUIElement(element, UIElement.class).getValue(),
+        CustomAssertions.assertThatContains(new ElementReader(page).getUIElement(element, UIElement.class).getValue(),
                 text, "Element " + element + " text is wrong");
     }
 
     @And("^I see text for '(.*)' element by '(.*)' number contains text '(.*)' on the '(.*)' page$")
     public void ISeeTextForElementByNumberContainsTextOnThePage(String element, int number, String text, String page) throws Exception {
-        CustomAssertions.assertThatContains(new IdentificatorReader(page).getUIElementWithVariables(element, UIElement.class, number).getValue(),
+        CustomAssertions.assertThatContains(new ElementReader(page).getUIElementWithVariables(element, UIElement.class, number).getValue(),
                 text, "Text is wrong for element " + element + " and index " + number);
     }
 
@@ -112,7 +111,7 @@ public class CommonSteps extends BaseSteps {
         List<Map<String, String>> data = table.asMaps();
         for (Map<String, String> row : data) {
             CustomAssertions.assertThatTrue(
-                    new IdentificatorReader(page).getUIElement(row.get("ELEMENT"), UIElement.class).isDisplayed(),
+                    new ElementReader(page).getUIElement(row.get("ELEMENT"), UIElement.class).isDisplayed(),
                     "Element " + row.get("ELEMENT") + " is not displayed");
         }
 
@@ -121,11 +120,11 @@ public class CommonSteps extends BaseSteps {
                 if (row.get("LABEL").startsWith("*")) {
                     String label = row.get("LABEL").replace("*", "");
                     CustomAssertions.assertThatContains(
-                            new IdentificatorReader(page).getUIElement(row.get("ELEMENT"), UIElement.class).getValue(),
+                            new ElementReader(page).getUIElement(row.get("ELEMENT"), UIElement.class).getValue(),
                             label, "Element " + row.get("ELEMENT") + " label is wrong");
                 } else if (!row.get("LABEL").isEmpty()) {
                     CustomAssertions.assertThatEquals(
-                            new IdentificatorReader(page).getUIElement(row.get("ELEMENT"), UIElement.class).getValue(),
+                            new ElementReader(page).getUIElement(row.get("ELEMENT"), UIElement.class).getValue(),
                             row.get("LABEL"), "Element " + row.get("ELEMENT") + " label is wrong");
                 }
             }
@@ -138,40 +137,40 @@ public class CommonSteps extends BaseSteps {
         switch (condition.toLowerCase()) {
             case "enabled":
                 if (!button(page, element).isEnabled()) {
-                    assertThat(new IdentificatorReader(page).getUIElement(element, Button.class).getAttribute("class"))
+                    assertThat(new ElementReader(page).getUIElement(element, Button.class).getAttribute("class"))
                             .as("Button is disabled").doesNotContain("disabled");
                 }
                 break;
             case "disabled":
                 if (button(page, element).isEnabled()) {
-                    assertThat(new IdentificatorReader(page).getUIElement(element, Button.class).getAttribute("class"))
+                    assertThat(new ElementReader(page).getUIElement(element, Button.class).getAttribute("class"))
                             .as("Button is enabled").contains("disabled");
                 }
             case "checked":
-                assertThat(new IdentificatorReader(page).getUIElement(element, Checkbox.class).isChecked()).isTrue();
+                assertThat(new ElementReader(page).getUIElement(element, Checkbox.class).isChecked()).isTrue();
             case "unchecked":
-                assertThat(new IdentificatorReader(page).getUIElement(element, Checkbox.class).isChecked()).isFalse();
+                assertThat(new ElementReader(page).getUIElement(element, Checkbox.class).isChecked()).isFalse();
             case "selected":
-                assertThat(new IdentificatorReader(page).getUIElement(element, RadioButton.class).isChecked()).isTrue();
+                assertThat(new ElementReader(page).getUIElement(element, RadioButton.class).isChecked()).isTrue();
             case "not selected":
-                assertThat(new IdentificatorReader(page).getUIElement(element, RadioButton.class).isChecked()).isFalse();
+                assertThat(new ElementReader(page).getUIElement(element, RadioButton.class).isChecked()).isFalse();
             default:
                 throw new Exception("Case is not defined for " + condition);
         }
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////// CLICKS //////////////////////////////////////////////////////
+    ///// CLICKS ///////////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @And("^I click on '(.*)' element on the '(.*)' page$")
     public void IClickOnIcon(String title, String page) throws Exception {
-        new IdentificatorReader(page).getUIElement(title, UIElement.class).click();
+        new ElementReader(page).getUIElement(title, UIElement.class).click();
     }
 
     @And("^I click on '(.*)' element containing '(.*)' text on the '(.*)' page$")
     public void IClickOnElementContainingTextOnThePage(String element, String text, String page) throws Exception {
-        new IdentificatorReader(page).getUIElementWithVariables(element, UIElement.class, text).click();
+        new ElementReader(page).getUIElementWithVariables(element, UIElement.class, text).click();
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

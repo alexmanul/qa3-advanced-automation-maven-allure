@@ -5,7 +5,7 @@ import Pages.Partials.Footer;
 import Pages.Partials.Header;
 import Pages.Partials.Menu;
 import Pages.Partials.PreFooter;
-import Utils.CommonApproach.Identificator;
+import Utils.CommonApproach.ElementId;
 import Utils.TestProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,7 +22,7 @@ public class S100MainPage extends BasePage implements Menu, Header, PreFooter, F
         driver.manage().window().maximize();
     }
 
-    @Identificator(id = "P100_REGISTER_BUTTON")
+    @ElementId(id = "P100_REGISTER_BUTTON")
     public Button topAskQuestionButton() {
         return Button.get(By.cssSelector("div > div > div > div > div > a"));
     }

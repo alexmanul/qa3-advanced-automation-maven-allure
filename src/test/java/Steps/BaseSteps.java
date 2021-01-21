@@ -1,7 +1,7 @@
 package Steps;
 
 import Elements.*;
-import Utils.CommonApproach.IdentificatorReader;
+import Utils.CommonApproach.ElementReader;
 import Utils.DriverSingleton;
 import Utils.Hooks;
 import Utils.TestProperties;
@@ -10,8 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseSteps {
 
-    public final WebDriver driver = DriverSingleton.getInstance();
-    public final WebDriverWait wait = new WebDriverWait(driver, Integer.parseInt(TestProperties.getProperty("selenium.explicit.wait")));
+    protected final WebDriver driver = DriverSingleton.getInstance();
+    protected final WebDriverWait wait = new WebDriverWait(
+            driver, Integer.parseInt(TestProperties.getProperty("selenium.explicit.wait")));
     protected String featureName = Hooks.featureName;
     protected String scenarioName = Hooks.scenarioName;
 
@@ -20,15 +21,15 @@ public class BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     protected Button button(String page, String element) throws Exception {
-        return new IdentificatorReader(page).getUIElement(element, Button.class);
+        return new ElementReader(page).getUIElement(element, Button.class);
     }
 
     protected Button buttonByButtonName(String page, String element, String buttonName) throws Exception {
-        return new IdentificatorReader(page).getUIElementWithVariables(element, Button.class, buttonName);
+        return new ElementReader(page).getUIElementWithVariables(element, Button.class, buttonName);
     }
 
     protected Button buttonByButtonNumber(String page, String element, int buttonNumber) throws Exception {
-        return new IdentificatorReader(page).getUIElementWithVariables(element, Button.class, buttonNumber);
+        return new ElementReader(page).getUIElementWithVariables(element, Button.class, buttonNumber);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36,15 +37,15 @@ public class BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     protected Label label(String page, String element) throws Exception {
-        return new IdentificatorReader(page).getUIElement(element, Label.class);
+        return new ElementReader(page).getUIElement(element, Label.class);
     }
 
     protected Label labelByLabelName(String page, String element, String labelName) throws Exception {
-        return new IdentificatorReader(page).getUIElementWithVariables(element, Label.class, labelName);
+        return new ElementReader(page).getUIElementWithVariables(element, Label.class, labelName);
     }
 
     protected Label labelByLabelNumber(String page, String element, int labelNumber) throws Exception {
-        return new IdentificatorReader(page).getUIElementWithVariables(element, Label.class, labelNumber);
+        return new ElementReader(page).getUIElementWithVariables(element, Label.class, labelNumber);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -52,7 +53,7 @@ public class BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     protected TextBox textBox(String page, String element) throws Exception {
-        return new IdentificatorReader(page).getUIElement(element, TextBox.class);
+        return new ElementReader(page).getUIElement(element, TextBox.class);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -60,7 +61,7 @@ public class BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     protected Checkbox checkbox(String page, String element) throws Exception {
-        return new IdentificatorReader(page).getUIElement(element, Checkbox.class);
+        return new ElementReader(page).getUIElement(element, Checkbox.class);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -68,7 +69,7 @@ public class BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     protected RadioButton radioButton(String page, String element) throws Exception {
-        return new IdentificatorReader(page).getUIElement(element, RadioButton.class);
+        return new ElementReader(page).getUIElement(element, RadioButton.class);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -76,7 +77,7 @@ public class BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     protected DatePicker datePicker(String page, String element) throws Exception {
-        return new IdentificatorReader(page).getUIElement(element, DatePicker.class);
+        return new ElementReader(page).getUIElement(element, DatePicker.class);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -84,7 +85,7 @@ public class BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     protected Dropdown dropdown(String page, String element) throws Exception {
-        return new IdentificatorReader(page).getUIElement(element, Dropdown.class);
+        return new ElementReader(page).getUIElement(element, Dropdown.class);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -92,7 +93,7 @@ public class BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     protected ElementList elementList(String page, String element) throws Exception {
-        return new IdentificatorReader(page).getUIElement(element, ElementList.class);
+        return new ElementReader(page).getUIElement(element, ElementList.class);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -100,6 +101,6 @@ public class BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     protected void executeMethod(String page, String method) throws Exception {
-        new IdentificatorReader(page).executeMethod(method);
+        new ElementReader(page).executeMethod(method);
     }
 }

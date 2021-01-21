@@ -27,7 +27,7 @@ public class Hooks {
     @Before("@UI")
     public void before(Scenario scenario) {
         driver = DriverSingleton.getInstance();
-        Screenshots screen = new Screenshots();
+        Screenshots screen = new Screenshots(driver);
         scenarioName = screen.getNameOfScenario(scenario);
         featureName = screen.getNameOfFeature(scenario);
         extent = DriverSingleton.getExtent();

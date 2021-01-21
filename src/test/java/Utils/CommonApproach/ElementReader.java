@@ -2,16 +2,17 @@ package Utils.CommonApproach;
 
 import Elements.UIElement;
 import Pages.BasePage;
+import lombok.extern.log4j.Log4j;
 //import lombok.extern.log4j.Log4j;
 
 import java.lang.reflect.Method;
 
-////@Log4j
-public class IdentificatorReader {
+//@Log4j
+public class ElementReader {
 
     private final BasePage page;
 
-    public IdentificatorReader(String page) throws Exception {
+    public ElementReader(String page) throws Exception {
         this.page = Pages.getCachedPageObject(page);
     }
 
@@ -27,9 +28,9 @@ public class IdentificatorReader {
 
     private Method getMethod(String idAnnotation, Class<?> pageClass) throws NoSuchMethodException {
         for (Method method : pageClass.getDeclaredMethods()) {
-            if (method.isAnnotationPresent(Identificator.class)) {
-                Identificator annotation = method.getAnnotation(Identificator.class);
-                ////log.debug("Annotation is " + annotation.id());
+            if (method.isAnnotationPresent(ElementId.class)) {
+                ElementId annotation = method.getAnnotation(ElementId.class);
+                //log.info("Annotation is " + annotation.id());
 
                 if (annotation.id().equals(idAnnotation)) {
                     ////log.debug("Method name " + method.getName());
@@ -73,7 +74,7 @@ public class IdentificatorReader {
 
     public String getElementType(String annotation) throws Exception {
         Method method = getMethod(annotation);
-        ////log.debug("Element type");
+        //log.debug("Element type");
         return method.getReturnType().toString();
     }
 

@@ -4,6 +4,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Identificator {
-    String id() default "IDENTIFICATOR IS NOT DEFINED";
+public @interface ElementId {
+    String id() default "ELEMENT ID IS NOT DEFINED";
 }

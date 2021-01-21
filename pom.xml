@@ -76,19 +76,19 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.10</version>
-            <scope>provided</scope>
-        </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.16</version>
+                <scope>test</scope>
+            </dependency>
 
-        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core &ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.apache.logging.log4j</groupId>-->
-        <!--            <artifactId>log4j-core</artifactId>-->
-        <!--            <version>2.13.1</version>-->
-        <!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.14.0</version>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
         <dependency>
@@ -132,7 +132,6 @@
             <artifactId>ashot</artifactId>
             <version>1.5.4</version>
         </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver -->
         <dependency>
@@ -197,12 +196,12 @@
             <version>7.3.0</version>
         </dependency>
 
-        <!--       <dependency>
-                 <groupId>com.github.testdevlab</groupId>
-                 <artifactId>TestUI</artifactId>
-                 <version>master-SNAPSHOT</version>
-             </dependency>
-        -->
+        <dependency>
+            <groupId>com.github.testdevlab</groupId>
+            <artifactId>TestUI</artifactId>
+            <version>1.2.8</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.github.tomakehurst/wiremock -->
         <dependency>
             <groupId>com.github.tomakehurst</groupId>
@@ -210,7 +209,6 @@
             <version>1.58</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>

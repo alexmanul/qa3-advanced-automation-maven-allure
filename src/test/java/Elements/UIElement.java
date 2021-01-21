@@ -2,6 +2,7 @@ package Elements;
 
 import Utils.TestDataReader;
 import Utils.TestProperties;
+import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -10,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-////@Log4j
+//@Log4j
 public abstract class UIElement {
     private By by;
     private final WebDriverWait wait;
