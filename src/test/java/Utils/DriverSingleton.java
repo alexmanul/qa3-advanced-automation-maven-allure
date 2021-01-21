@@ -2,6 +2,8 @@ package Utils;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -11,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-//@Log4j
+@Slf4j
 public class DriverSingleton {
     private static RemoteWebDriver driver;
     private static ExtentReports extent;
@@ -79,13 +81,13 @@ public class DriverSingleton {
 
     private static void printOutBrowserInfo() {
         Capabilities capabilities = driver.getCapabilities();
-        //log.info("Browser: " + capabilities.getBrowserName());
-        //log.info("Browser version: " + capabilities.getVersion());
-        //log.info("Browser platform: " + capabilities.getPlatform());
+        log.info("Browser: " + capabilities.getBrowserName());
+        log.info("Browser version: " + capabilities.getVersion());
+        log.info("Browser platform: " + capabilities.getPlatform());
     }
 
     private static void printSessionID() {
-        //    log//.("Session ID: " + getInstance().getSessionId());
+        log.info("Session ID: " + getInstance().getSessionId());
     }
 
     public static String getSeleniumGridURL() {

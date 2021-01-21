@@ -1,20 +1,20 @@
 package Utils.CommonApproach;
 
 import Pages.BasePage;
-import Pages.S100MainPage;
-import Pages.S101RegistrationPage;
+import Pages.P100MainPage;
+import Pages.P101RegistrationPage;
 import Steps.BaseSteps;
 import Utils.DriverSingleton;
 import Utils.TestProperties;
-//import lombok.extern.log4j.Log4j;
-import org.openqa.selenium.chrome.ChromeDriver;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.HashMap;
 import java.util.Map;
 
-////@Log4j
+@Slf4j
 public class Pages extends BaseSteps {
     private final static String MENU = "MENU";
     private final static String P100 = "P100";
@@ -26,19 +26,14 @@ public class Pages extends BaseSteps {
 
     private static void getPageObjectForSpecificPage(String screen) throws Exception {
         switch (screen) {
-            case "P100":
-                cache.put(P100, new S100MainPage(driver, wait));
-                return;
-            case "P101":
-                cache.put(P101, new S101RegistrationPage(driver, wait));
-                return;
-            default:
-                throw new Exception("Page object is not found for the " + screen);
+            case "P100" -> cache.put(P100, new P100MainPage(driver, wait));
+            case "P101" -> cache.put(P101, new P101RegistrationPage(driver, wait));
+            default -> throw new Exception("Page object is not found for the " + screen);
         }
     }
 
     public static BasePage getCachedPageObject(String page) throws Exception {
-        ////log.debug("Cached pages count is " + cache.size());
+        log.debug("Cached pages count is " + cache.size());
         if (!cache.containsKey(page)) {
             getPageObjectForSpecificPage(page);
         }
@@ -46,7 +41,7 @@ public class Pages extends BaseSteps {
     }
 
     public static void clearCache() {
-        ////log.debug("Clearing cache");
+        log.debug("Clearing cache");
         cache.clear();
     }
 

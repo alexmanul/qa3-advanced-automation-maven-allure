@@ -2,10 +2,12 @@ package Utils;
 
 import Steps.SharedContext;
 import io.cucumber.core.api.Scenario;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategy;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -13,12 +15,14 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
+@Slf4j
 public class Screenshots {
 
     private final String screenshotDirectory = System.getProperty("user.dir")
             + File.separator + TestProperties.getProperty("screenshots.folder1")
-            + File.separator + TestProperties.getProperty("screenshots.folder1");
-
+            + File.separator + TestProperties.getProperty("screenshots.folder2");
+    private final ShootingStrategy RETINA = ShootingStrategies.viewportRetina(1000, 0, 0, 1);
+    private final ShootingStrategy SIMPLE = ShootingStrategies.simple();
     WebDriver driver;
     private SharedContext context;
 
@@ -33,17 +37,15 @@ public class Screenshots {
 
     public Screenshot makeScreenshot(WebDriver driver) {
         Screenshot screenshot = new AShot()
-                .shootingStrategy
-                        (ShootingStrategies.viewportRetina(1000, 0, 0, 1))
+                .shootingStrategy(RETINA)
                 .takeScreenshot(driver);
-        // log.debug(screenshot);
+        log.debug(String.valueOf(screenshot));
         return screenshot;
     }
 
     public BufferedImage getScreenshot() {
         Screenshot screenshot = new AShot()
-                .shootingStrategy
-                        (ShootingStrategies.viewportRetina(1000, 0, 0, 1))
+                .shootingStrategy(SIMPLE)
                 .takeScreenshot(driver);
         return screenshot.getImage();
     }
@@ -63,7 +65,7 @@ public class Screenshots {
 
     public String generateScreenshotName(String dir, String prefix, String pageName) {
         String fileName = prefix + pageName + ".png";
-        // log.debug ("Screenshot file name: "+ fileName);
+        log.debug("Screenshot file name: " + fileName);
         return screenshotDirectory + File.separator + dir + File.separator + fileName;
     }
 

@@ -1,6 +1,8 @@
 package Utils;
 
 import Steps.BaseSteps;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 
 import java.io.File;
@@ -11,7 +13,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-////@Log4j
+@Slf4j
 public class TestDataReader extends BaseSteps {
 
     /**
@@ -32,7 +34,7 @@ public class TestDataReader extends BaseSteps {
             byte[] data = Files.readAllBytes(Paths.get(testDataRelativePath));
             jsonObject = new JSONObject(new String(data, "UTF-8"));
         } catch (Exception e) {
-            //log.error("Test data json file is not found");
+            log.error("Test data json file is not found");
         }
 
         Pattern pattern = Pattern.compile("(@/[\\S]+)");
@@ -49,7 +51,7 @@ public class TestDataReader extends BaseSteps {
                 result = result.replace(matcher.group(1), jsonObject.query(matcher.group(1).substring(1)).toString());
             }
         }
-        ////log.debug("Original value: " + key + ", Converted value: " + result);
+        log.debug("Original value: " + key + ", Converted value: " + result);
         return result;
     }
 
@@ -73,7 +75,7 @@ public class TestDataReader extends BaseSteps {
         test.add(folder);
         test.add(file);
         String result = String.join(File.separator, test);
-        ////log.info("Test data file relative path is " + result);
+        log.info("Test data file relative path is " + result);
         return result;
     }
 
@@ -90,10 +92,10 @@ public class TestDataReader extends BaseSteps {
         try {
             jsonObject = new JSONObject(new String(Files.readAllBytes(Paths.get(testDataFileRelativePath))));
         } catch (Exception e) {
-            //log.error("Test data JSON file is not found");
+            log.error("Test data JSON file is not found");
         }
 
-        ////log.info("Original value: " + string + ", Converted value: " + result);
+        log.info("Original value: " + string + ", Converted value: " + result);
         return result;
     }
 
@@ -104,7 +106,7 @@ public class TestDataReader extends BaseSteps {
         for (String value : originalValueArray) {
             convertedValueList.add(getDataFromFile(value));
         }
-        ////log.info("Converted test data value list is " + convertedValueList);
+        log.info("Converted test data value list is " + convertedValueList);
         return convertedValueList;
     }
 }

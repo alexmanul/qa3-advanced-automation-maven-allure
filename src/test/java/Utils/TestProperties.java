@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-////@Log4j
+//@Slf4j
 public class TestProperties {
 
     private static void setEnvironment() {
@@ -28,7 +28,7 @@ public class TestProperties {
             e.printStackTrace();
         }
 
-//        ////log.debug("Property key: " + property + ", property value: " + properties.getProperty(property));
+//        log.debug("Property key: " + property + ", property value: " + properties.getProperty(property));
         return properties.getProperty(property);
     }
 }

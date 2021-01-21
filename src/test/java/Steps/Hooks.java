@@ -23,6 +23,11 @@ public class Hooks {
     final SQLHelper sqlHelper = new SQLHelper();
     private WebDriver driver;
     private ExtentReports extent;
+    private final SharedContext context;
+
+    public Hooks(SharedContext context) {
+        this.context = context;
+    }
 
     @Before("@UI")
     public void before(Scenario scenario) {
@@ -34,6 +39,7 @@ public class Hooks {
         extentTest = DriverSingleton.getExtentTest(featureName, scenarioName);
         Pages.clearCache();
         Pages.setWebDriverAndWait();
+        context.scenario = scenario;
     }
 
     @After("@UI")

@@ -11,9 +11,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class S100MainPage extends BasePage implements Menu, Header, PreFooter, Footer {
+public class P100MainPage extends BasePage implements Menu, Header, PreFooter, Footer {
 
-    public S100MainPage(WebDriver driver, WebDriverWait wait) {
+    public P100MainPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
 

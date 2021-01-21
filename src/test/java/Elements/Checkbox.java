@@ -1,12 +1,14 @@
 package Elements;
 
 import Utils.DriverSingleton;
-import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Slf4j
 public class Checkbox extends UIElement {
 
     public Checkbox(WebDriver driver, By by) {
@@ -34,7 +36,7 @@ public class Checkbox extends UIElement {
     public boolean isChecked() {
         waitEverythingIsLoaded();
         boolean checked = getElement().isSelected();
-        // log.debug ("Chechkbox is checked " + checked);
+        log.debug("Chechkbox is checked " + checked);
         return checked;
     }
 }

@@ -2,10 +2,12 @@ package Elements;
 
 import Utils.DriverSingleton;
 //import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-////@Log4j
+@Slf4j
 public class ElementList extends UIElement {
 
     public ElementList(WebDriver driver, By by) {
@@ -26,13 +28,13 @@ public class ElementList extends UIElement {
             elementCount = getElements().size();
         } catch (Exception ignored) {
         }
-        ////log.debug("Element count is " + elementCount);
+        log.debug("Element count is " + elementCount);
         return elementCount;
     }
 
     @Override
     public String getValue() {
-        //log.error("Value is not defined");
+        log.error("Value is not defined");
         return null;
     }
 }

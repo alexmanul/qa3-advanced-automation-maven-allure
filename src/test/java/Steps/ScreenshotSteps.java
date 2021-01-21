@@ -3,6 +3,7 @@ package Steps;
 import Utils.Screenshots;
 import Utils.TestProperties;
 import io.cucumber.java.en.And;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
@@ -11,6 +12,7 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
+@Slf4j
 public class ScreenshotSteps extends BaseSteps {
 
     private final SharedContext context;
@@ -19,12 +21,12 @@ public class ScreenshotSteps extends BaseSteps {
         this.context = context;
     }
 
-    @And("^I take base screenshot of '(.*)' page and store as expected result$")
+    @And("^I take sample screenshot of '(.*)' page and store as expected result$")
     public void TakeBaseScreenshotAndStoreAsExpectedResult(String page) throws Exception {
         Screenshots screen = new Screenshots(driver, context);
         String baseFile = screen.generateScreenshotName("base", "base-", page);
         screen.createFolders(baseFile);
-        // log.info("Name of base file: "+ baseFile);
+        log.info("Name of base file: " + baseFile);
         ImageIO.write(screen.getScreenshot(), "PNG", new File(baseFile));
     }
 
@@ -34,7 +36,7 @@ public class ScreenshotSteps extends BaseSteps {
         String actualFile = screen.generateScreenshotName("actual", "actual-", page);
         screen.createFolders(actualFile);
         ImageIO.write(screen.getScreenshot(), "PNG", new File(actualFile));
-        // log.info("Name of actual file: "+ actualFile);
+        log.info("Name of actual file: " + actualFile);
 
         String baseFile = screen.generateScreenshotName("base", "base-", page);
         BufferedImage baseImage = ImageIO.read(new File(baseFile));
@@ -58,7 +60,7 @@ public class ScreenshotSteps extends BaseSteps {
             screen.embedScreenshot(actualImage);
             screen.embedScreenshot(diff.getTransparentMarkedImage());
             screen.embedScreenshot(diff.getMarkedImage());
-            // log.info("Number of different pixels: " + diff.getDiffSize());
+            log.info("Number of different pixels: " + diff.getDiffSize());
         }
         Assert.assertFalse("Images " + page + " are not same", diff.hasDiff());
     }

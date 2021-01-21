@@ -2,18 +2,21 @@ package MYSQL;
 
 //import lombok.extern.log4j.Log4j;
 
-//@Log4j
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class SQLQueryCatalog {
 
     public String updateAgentsByAgentName(String tableDB, String key, String newValue, String name) {
         String query = "UPDATE " + tableDB + " SET " + key + " = '" + newValue + "' WHERE AGENT_NAME = '" + name + "'";
-        //log.debug(query);
+        log.debug(query);
         return query;
     }
 
     public String findAllByAgentName(String tableDB, String name) {
         String query = "SELECT * FROM " + tableDB + " WHERE AGENT_NAME = '" + name + "'";
-        //log.debug(query);
+        log.debug(query);
         return query;
     }
 
@@ -26,19 +29,19 @@ public class SQLQueryCatalog {
                 "'" + commission + "', " +
                 "'" + phoneNo + "', " +
                 "'" + country + "')";
-        //log.debug(query);
+        log.debug(query);
         return query;
     }
 
     public String insertNewEntity(String tableDB, String values) {
         String query = "INSERT INTO " + tableDB + " VALUES (" + values + ")";
-        //log.debug(query);
+        log.debug(query);
         return query;
     }
 
     public String deleteNewEntityByAgentName(String tableDB, String name) {
         String query = "DELETE FROM " + tableDB + " WHERE AGENT_NAME = '" + name + "'";
-        //log.debug(query);
+        log.debug(query);
         return query;
     }
 

@@ -8,7 +8,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-////@Log4j
+//@Slf4j
 public class BrowserProperties extends DesiredCapabilities {
 
     private static BrowserProperties desiredCapabilities = null;
@@ -26,7 +26,7 @@ public class BrowserProperties extends DesiredCapabilities {
 
     private static void setCapabilities() throws Exception {
         if (System.getProperty("browser") == null) System.setProperty("browser", "chrome");
-//        ////log.info
+//        log.info
         switch (System.getProperty("browser")) {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();

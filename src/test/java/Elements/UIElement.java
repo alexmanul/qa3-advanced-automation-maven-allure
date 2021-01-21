@@ -2,7 +2,8 @@ package Elements;
 
 import Utils.TestDataReader;
 import Utils.TestProperties;
-import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -11,11 +12,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-//@Log4j
+@Slf4j
 public abstract class UIElement {
-    private By by;
     private final WebDriverWait wait;
     private final WebDriver driver;
+    private By by;
     private WebElement element;
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -42,10 +43,11 @@ public abstract class UIElement {
         for (int i = 0; i < 5; i++) {
             try {
                 webElement = element == null ? driver.findElement(by) : element;
-                webElement.isDisplayed(); // Any action with element is required to catch the stale element exception
+                // Any action with element is required to catch the stale element exception
+                webElement.isDisplayed();
                 break;
             } catch (StaleElementReferenceException e) {
-                // log.error(e.getMessage());
+                log.error(e.getMessage());
                 sleep(100);
             }
         }
@@ -66,7 +68,7 @@ public abstract class UIElement {
                 wait.until(ExpectedConditions.visibilityOf(getElement()));
                 break;
             } catch (StaleElementReferenceException ex) {
-                // log.error (ex.getMessage());
+                log.error(ex.getMessage());
                 sleep(100);
             }
         }
@@ -112,9 +114,9 @@ public abstract class UIElement {
                     String documentState = "";
                     try {
                         documentState = (String) js.executeScript("return document.readyState");
-                        // log.debug("Document state is: "+documentState);
+                        log.debug("Document state is: " + documentState);
                     } catch (JavascriptException e) {
-                        // log.error (e.getMessage());
+                        log.error(e.getMessage());
                     }
                     return documentState.equals("complete");
                 }
@@ -179,7 +181,7 @@ public abstract class UIElement {
                     getElement().sendKeys(TestDataReader.getDataFromFile(input));
                     break;
                 } catch (StaleElementReferenceException e) {
-                    // log.error (e.getMessage());
+                    log.error(e.getMessage());
                     sleep(100);
                 }
             }
@@ -200,6 +202,7 @@ public abstract class UIElement {
      */
     public String getValue() {
         waitEverythingIsLoaded();
+        log.info(getText());
         return getText();
     }
 
@@ -207,7 +210,7 @@ public abstract class UIElement {
         waitPageIsLoaded();
         waitForElementPresents();
         String value = getElement().getAttribute(attribute).trim();
-        // log.debug("Attribute: '" + attribute + "', value is: '" + value + " '");
+        log.debug("Attribute: '" + attribute + "', value is: '" + value + " '");
         return value;
     }
 
@@ -219,7 +222,7 @@ public abstract class UIElement {
     //  protected void scrollToElement() {
     //      JavascriptExecutor je = (JavascriptExecutor) driver;
     //      long windowHeight = (Long) je.executeScript("return window.innerHeight");
-    //      ////log.debug("Inner height " + windowHeight);
+    //      log.debug("Inner height " + windowHeight);
     //      // Element position before scroll
     //      Point p1 = getElement().getLocation();
     //      je.executeScript("arguments[0].scrollIntoView();", getElement());
@@ -253,11 +256,11 @@ public abstract class UIElement {
                 return;
             } catch (Exception e) {
                 if (i != 4) {
-                    // log.debug("Element is not clickable, scrolling up for 50 px");
+                    log.debug("Element is not clickable, scrolling up for 50 px");
                     location = location.moveBy(0, -100);
                     je.executeScript("window.scrollTo(0," + location.getY() + ")");
                 } else {
-                    // log.error ("Element is not clickable");
+                    log.error("Element is not clickable");
                 }
             }
         }
@@ -274,7 +277,7 @@ public abstract class UIElement {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         waitEverythingIsLoaded();
         String result = js.executeScript("return arguments[0].value", getElement()).toString();
-        // log.debug("Text content from UI: " + result);
+        log.debug("Text content from UI: " + result);
         return result;
     }
 
@@ -286,11 +289,11 @@ public abstract class UIElement {
                 result = getElement().getText();
                 break;
             } catch (StaleElementReferenceException e) {
-                // log.error ("Element is not clickable");
+                log.error("Element is not clickable");
                 sleep(100);
             }
         }
-        // log.debug("Text content from UI: " + result);
+        log.debug("Text content from UI: " + result);
         return result;
     }
 
@@ -323,11 +326,11 @@ public abstract class UIElement {
                 isDisplayed = getElement().isDisplayed();
                 break;
             } catch (StaleElementReferenceException e) {
-                // log.error ("Element is stale " + e.getMessage());
+                log.error("Element is stale " + e.getMessage());
                 sleep(100);
             }
         }
-        //log.debug("Element is displayed " + isDisplayed);
+        log.debug("Element is displayed " + isDisplayed);
         return isDisplayed;
     }
 
@@ -347,7 +350,7 @@ public abstract class UIElement {
     public boolean isNotDisplayed() {
         boolean isNotVisible;
         isNotVisible = !isPresents() || !isDisplayed();
-        //log.debug("Element is not displayed " + isNotVisible);
+        log.debug("Element is not displayed " + isNotVisible);
         return isNotVisible;
     }
 
@@ -355,7 +358,7 @@ public abstract class UIElement {
         try {
             Thread.sleep(milliseconds);
         } catch (InterruptedException e) {
-            // log.error (e.getMessage());
+            log.error(e.getMessage());
         }
     }
 }

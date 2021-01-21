@@ -9,6 +9,8 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 
 import java.util.List;
@@ -16,7 +18,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-//@Log4j
+@Slf4j
 public class PetstoreSteps {
 
     private final String PETSTORE_API = TestProperties.getProperty("petstore.url");
@@ -39,7 +41,7 @@ public class PetstoreSteps {
         httpRequest.body(newPet.toString());
         response = httpRequest.post(PETSTORE_API + "v2/pet/");
         response.then().statusCode(200);
-        //log.info("Pet is created with id " + id + " and name " + name);
+        log.info("Pet is created with id " + id + " and name " + name);
     }
 
     @And("^I delete pet information by '(.*)' id$")
@@ -52,7 +54,7 @@ public class PetstoreSteps {
         List<Map<String, String>> data = table.asMaps(String.class, String.class);
         ResponseBody body = given().get(PETSTORE_API + "v2/pet/" + id).body();
         JsonPath jp = new JsonPath(body.asString());
-        //log.info(jp);
+        log.info(String.valueOf(jp));
 
         for (Map<String, String> row : data) {
             String key = row.get("JSON_KEY");
@@ -84,11 +86,11 @@ public class PetstoreSteps {
         httpRequest.body(pet.toString());
 
         System.out.println(httpRequest.body(pet.toString()));
-//        log.info(httpRequest.body(pet.toString()));
+        log.info(String.valueOf(httpRequest.body(pet.toString())));
 
         response = httpRequest.put(PETSTORE_API + "v2/pet/");
         response.then().statusCode(200);
-        //log.info("Pet with id " + id + " is updated");
+        log.info("Pet with id " + id + " is updated");
     }
 }
 

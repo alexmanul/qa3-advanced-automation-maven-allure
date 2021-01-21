@@ -5,6 +5,8 @@ import MYSQL.SQLQueryCatalog;
 import Utils.TestProperties;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.jdbc.ScriptRunner;
 
 import java.io.BufferedReader;
@@ -20,9 +22,7 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-//import lombok.extern.log4j.Log4j;
-
-////@Log4j
+@Slf4j
 public class DatabaseSteps {
 
     final SQLHelper sqlHelper = new SQLHelper();
@@ -68,7 +68,7 @@ public class DatabaseSteps {
         }
 
         String newValues = newAgent.toString().replaceAll("[{}\\[\\]]", "");
-        //log.info(newValues);
+        log.info(newValues);
         String insertQuery = sqlQueryCatalog.insertNewEntity(tableDB, newValues);
         statement.executeUpdate(insertQuery);
     }
@@ -82,9 +82,9 @@ public class DatabaseSteps {
     @And("I create '(.*)' table in database")
     public void iUpdateTableInDBWithNewAgent(String tableDB) throws Exception {
         String fileName = TestProperties.getProperty("sql.create.table." + tableDB.toLowerCase() + "");
-        //log.info(fileName);
+        log.info(fileName);
         Connection connection = sqlHelper.createConnection();
-        //log.debug("Connection established...");
+        log.debug("Connection established...");
 
         ScriptRunner sr = new ScriptRunner(connection);
         Reader reader = new BufferedReader(new FileReader(fileName));

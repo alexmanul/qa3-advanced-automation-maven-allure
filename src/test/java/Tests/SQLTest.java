@@ -2,6 +2,8 @@ package Tests;
 
 import MYSQL.SQLHelper;
 import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +13,7 @@ import java.sql.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-//@Log4j
+@Slf4j
 public class SQLTest {
 
     final String user = "test_user";
@@ -21,7 +23,7 @@ public class SQLTest {
     @Before
     public void createDBTableAgents() throws IOException, SQLException {
         sqlHelper.readSQLFromFile();
-//        log.info("Database table 'AGENTS' is created");
+        log.info("Database table 'AGENTS' is created");
     }
 
     @After
@@ -30,7 +32,7 @@ public class SQLTest {
         Connection connection = sqlHelper.createConnection();
         Statement statement = connection.createStatement();
         statement.executeUpdate(query);
-//        log.info("Database is dropped");
+        log.info("Database is dropped");
         connection.close();
     }
 

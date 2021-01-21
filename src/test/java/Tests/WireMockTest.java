@@ -2,7 +2,8 @@ package Tests;
 
 import Utils.Helpers.RESTHelper;
 import com.github.tomakehurst.wiremock.WireMockServer;
-import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -13,7 +14,7 @@ import java.io.IOException;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 
-//@Log4j
+@Slf4j
 public class WireMockTest {
 
     private final String HOST = "localhost";
@@ -34,6 +35,6 @@ public class WireMockTest {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpResponse httpResponse = httpClient.execute(request);
         String responseString = RESTHelper.convertResponseToString(httpResponse);
-//        log.info(responseString);
+        log.info(responseString);
     }
 }
