@@ -23,36 +23,36 @@ Feature: QA3 - Advanced Automation. REST. Swagger Petstore
 
   @API @SmokeTest
   Scenario Outline: SWG01. User can get pet information
-	When I create pet information with 'available' status, '<NAME>' name and '<ID>' id
-	And I get pet information by '<ID>' id
-	And I verify response status code is '200'
-	Then I verify pet information by '<ID>' id contains values
-	  | JSON_KEY | JSON_VALUE |
-	  | id       | <ID>       |
-	  | name     | <NAME>     |
+    When I create pet information with 'available' status, '<NAME>' name and '<ID>' id
+    And I get pet information by '<ID>' id
+    And I verify response status code is '200'
+    Then I verify pet information by '<ID>' id contains values
+      | JSON_KEY | JSON_VALUE |
+      | id       | <ID>       |
+      | name     | <NAME>     |
 
-	Examples:
-	  | ID | NAME  |
-	  | 5  | Shark |
+    Examples:
+      | ID | NAME  |
+      | 5  | Shark |
 
   @API @SmokeTest
   Scenario Outline: SWG02. User can create, update and delete pet information
-	When I create pet information with 'available' status, '<NAME>' name and '<ID>' id
-	And I delete pet information by '<ID>' id
-	And I verify response status code is '200'
-	And I get pet information by '<ID>' id
-	And I verify response status code is '404'
-	And I create pet information with 'available' status, '<NAME>' name and '<ID>' id
-	And I update pet information by '<ID>' id with next values
-	  | JSON_KEY | JSON_VALUE |
-	  | id       | <ID>       |
-	  | status   | <STATUS>   |
-	Then I verify pet information by '<ID>' id contains values
-	  | JSON_KEY | JSON_VALUE |
-	  | status   | <STATUS>   |
+    When I create pet information with 'available' status, '<NAME>' name and '<ID>' id
+    And I delete pet information by '<ID>' id
+    And I verify response status code is '200'
+    And I get pet information by '<ID>' id
+    And I verify response status code is '404'
+    And I create pet information with 'available' status, '<NAME>' name and '<ID>' id
+    And I update pet information by '<ID>' id with next values
+      | JSON_KEY | JSON_VALUE |
+      | id       | <ID>       |
+      | status   | <STATUS>   |
+    Then I verify pet information by '<ID>' id contains values
+      | JSON_KEY | JSON_VALUE |
+      | status   | <STATUS>   |
 
-	Examples:
-	  | NAME  | ID     | STATUS    |
-	  | Manul | 589673 | available |
-	  | Kotik | 443556 | pending   |
-	  | Simba | 258494 | sold      |
+    Examples:
+      | NAME  | ID     | STATUS    |
+      | Manul | 589673 | available |
+      | Kotik | 443556 | pending   |
+      | Simba | 258494 | sold      |

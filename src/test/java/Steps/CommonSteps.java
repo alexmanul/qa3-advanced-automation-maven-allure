@@ -11,7 +11,6 @@ import Utils.CustomAssertions;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.Dimension;
 

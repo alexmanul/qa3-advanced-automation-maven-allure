@@ -2,8 +2,6 @@ package Utils;
 
 import Utils.InternalClasses.CustomDate;
 import com.google.gson.Gson;
-//import lombok.extern.log4j.Log4j;
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpEntity;

@@ -1,8 +1,6 @@
 package Tests;
 
 import MYSQL.SQLHelper;
-import lombok.extern.log4j.Log4j;
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.After;
 import org.junit.Before;

@@ -17,18 +17,18 @@ Feature: QA3 - Advanced Automation. Database with background
 #  simpleParameterValidation(int index, String validateValue), countSimpleValidation(int countAmount)
 
   Background:
-	Given I create 'AGENTS' table in database
+    Given I create 'AGENTS' table in database
 
   @DB @DropDBTableAgents
   Scenario: DB01. Add and remove data - change agent data
-	When I update 'AGENTS' table entity with 'Mukesh' agent name with new values
-	  | TABLE_KEY    | NEW_VALUE    |
-	  | WORKING_AREA | Bangladesh   |
-	  | PHONE_NO     | 777-11111111 |
-	Then I verify 'AGENTS' table entity with 'Mukesh' agent name contains values
-	  | TABLE_KEY    | NEW_VALUE    |
-	  | AGENT_CODE   | A002         |
-	  | AGENT_NAME   | Mukesh       |
-	  | WORKING_AREA | Bangladesh   |
-	  | COMMISSION   | 0.11         |
-	  | PHONE_NO     | 777-11111111 |
+    When I update 'AGENTS' table entity with 'Mukesh' agent name with new values
+      | TABLE_KEY    | NEW_VALUE    |
+      | WORKING_AREA | Bangladesh   |
+      | PHONE_NO     | 777-11111111 |
+    Then I verify 'AGENTS' table entity with 'Mukesh' agent name contains values
+      | TABLE_KEY    | NEW_VALUE    |
+      | AGENT_CODE   | A002         |
+      | AGENT_NAME   | Mukesh       |
+      | WORKING_AREA | Bangladesh   |
+      | COMMISSION   | 0.11         |
+      | PHONE_NO     | 777-11111111 |

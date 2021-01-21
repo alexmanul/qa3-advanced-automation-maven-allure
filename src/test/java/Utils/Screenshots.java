@@ -65,7 +65,7 @@ public class Screenshots {
 
     public String generateScreenshotName(String dir, String prefix, String pageName) {
         String fileName = prefix + pageName + ".png";
-        log.debug("Screenshot file name: " + fileName);
+        log.info("Screenshot file name: " + fileName);
         return screenshotDirectory + File.separator + dir + File.separator + fileName;
     }
 

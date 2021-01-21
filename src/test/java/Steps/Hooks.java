@@ -9,6 +9,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
@@ -16,14 +17,15 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+@Slf4j
 public class Hooks {
     static String featureName;
     static String scenarioName;
     private static ExtentTest extentTest;
     final SQLHelper sqlHelper = new SQLHelper();
+    private final SharedContext context;
     private WebDriver driver;
     private ExtentReports extent;
-    private final SharedContext context;
 
     public Hooks(SharedContext context) {
         this.context = context;
@@ -55,13 +57,13 @@ public class Hooks {
         Connection connection = sqlHelper.createConnection();
         Statement statement = connection.createStatement();
         statement.executeUpdate(query);
-        //log.info("Database is dropped");
+        log.info("Database is dropped");
         connection.close();
     }
 
     @Before("@CreateDBTableAgents")
     public void createDBTableAgents() throws IOException, SQLException {
         sqlHelper.readSQLFromFile();
-        //log.info("Database table 'AGENTS' is created");
+        log.info("Database table 'AGENTS' is created");
     }
 }

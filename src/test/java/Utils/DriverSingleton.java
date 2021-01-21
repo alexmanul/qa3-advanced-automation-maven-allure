@@ -2,7 +2,6 @@ package Utils;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -26,8 +25,8 @@ public class DriverSingleton {
             driver = new RemoteWebDriver(new URL(getSeleniumGridURL()), BrowserProperties.getCapabilities());
 
             String reportsFileToSave = System.getProperty("user.dir")
-                    + File.separator + TestProperties.getProperty("screenshots.folder1")
-                    + File.separator + TestProperties.getProperty("screenshots.folder2")
+                    + File.separator + TestProperties.getProperty("report.screenshots.folder1")
+                    + File.separator + TestProperties.getProperty("report.screenshots.folder2")
                     + File.separator + TestProperties.getProperty("report.html");
 
             extent = new ExtentReports(reportsFileToSave, false);

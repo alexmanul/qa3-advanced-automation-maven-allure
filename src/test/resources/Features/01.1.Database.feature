@@ -14,43 +14,43 @@ Feature: QA3 - Advanced Automation. Database
 #  Create @After step – Drop agents table
   @DB @CreateDBTableAgents @DropDBTableAgents
   Scenario: DB01. Simple data validation
-	When I verify 'AGENTS' table entity with 'Lucida' agent name contains values
-	  | TABLE_KEY    | NEW_VALUE    |
-	  | AGENT_CODE   | A012         |
-	  | AGENT_NAME   | Lucida       |
-	  | WORKING_AREA | San Jose     |
-	  | COMMISSION   | 0.12         |
-	  | PHONE_NO     | 044-52981425 |
+    When I verify 'AGENTS' table entity with 'Lucida' agent name contains values
+      | TABLE_KEY    | NEW_VALUE    |
+      | AGENT_CODE   | A012         |
+      | AGENT_NAME   | Lucida       |
+      | WORKING_AREA | San Jose     |
+      | COMMISSION   | 0.12         |
+      | PHONE_NO     | 044-52981425 |
 
   @DB @CreateDBTableAgents @DropDBTableAgents
   Scenario: DB02. Add and remove data - insert new agent
-	When I update 'AGENTS' table entity with 'Test' agent name contains values
-	  | TABLE_KEY    | NEW_VALUE    |
-	  | AGENT_CODE   | A013         |
-	  | AGENT_NAME   | Test         |
-	  | WORKING_AREA | Riga         |
-	  | COMMISSION   | 0.75         |
-	  | PHONE_NO     | 778-32556178 |
-	  | COUNTRY      | LATVIA       |
-	Then I verify 'AGENTS' table entity with 'Test' agent name contains values
-	  | TABLE_KEY    | NEW_VALUE    |
-	  | AGENT_CODE   | A013         |
-	  | AGENT_NAME   | Test         |
-	  | WORKING_AREA | Riga         |
-	  | COMMISSION   | 0.75         |
-	  | PHONE_NO     | 778-32556178 |
-	  | COUNTRY      | LATVIA       |
+    When I update 'AGENTS' table entity with 'Test' agent name contains values
+      | TABLE_KEY    | NEW_VALUE    |
+      | AGENT_CODE   | A013         |
+      | AGENT_NAME   | Test         |
+      | WORKING_AREA | Riga         |
+      | COMMISSION   | 0.75         |
+      | PHONE_NO     | 778-32556178 |
+      | COUNTRY      | LATVIA       |
+    Then I verify 'AGENTS' table entity with 'Test' agent name contains values
+      | TABLE_KEY    | NEW_VALUE    |
+      | AGENT_CODE   | A013         |
+      | AGENT_NAME   | Test         |
+      | WORKING_AREA | Riga         |
+      | COMMISSION   | 0.75         |
+      | PHONE_NO     | 778-32556178 |
+      | COUNTRY      | LATVIA       |
 
   @DB @CreateDBTableAgents @DropDBTableAgents
   Scenario: DB03. Add and remove data - change agent data
-	When I update 'AGENTS' table entity with 'Mukesh' agent name with new values
-	  | TABLE_KEY    | NEW_VALUE    |
-	  | WORKING_AREA | Bangladesh   |
-	  | PHONE_NO     | 777-11111111 |
-	Then I verify 'AGENTS' table entity with 'Mukesh' agent name contains values
-	  | TABLE_KEY    | NEW_VALUE    |
-	  | AGENT_CODE   | A002         |
-	  | AGENT_NAME   | Mukesh       |
-	  | WORKING_AREA | Bangladesh   |
-	  | COMMISSION   | 0.11         |
-	  | PHONE_NO     | 777-11111111 |
+    When I update 'AGENTS' table entity with 'Mukesh' agent name with new values
+      | TABLE_KEY    | NEW_VALUE    |
+      | WORKING_AREA | Bangladesh   |
+      | PHONE_NO     | 777-11111111 |
+    Then I verify 'AGENTS' table entity with 'Mukesh' agent name contains values
+      | TABLE_KEY    | NEW_VALUE    |
+      | AGENT_CODE   | A002         |
+      | AGENT_NAME   | Mukesh       |
+      | WORKING_AREA | Bangladesh   |
+      | COMMISSION   | 0.11         |
+      | PHONE_NO     | 777-11111111 |

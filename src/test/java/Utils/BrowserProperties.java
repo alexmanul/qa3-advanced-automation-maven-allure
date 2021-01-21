@@ -1,6 +1,6 @@
 package Utils;
 
-//import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -8,7 +8,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-//@Slf4j
+@Slf4j
 public class BrowserProperties extends DesiredCapabilities {
 
     private static BrowserProperties desiredCapabilities = null;

@@ -18,7 +18,7 @@ public class SignInPage {
         this.passwordInput.val(text);
     }
 
-    public void login( ) {
+    public void login() {
         this.loginLink.click();
     }
 

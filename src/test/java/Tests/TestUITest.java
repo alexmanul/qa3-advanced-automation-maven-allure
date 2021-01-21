@@ -12,14 +12,14 @@ public class TestUITest {
 
     @Before
     public void setAndroidPlatform() {
- //       Configuration.automationType = Configuration.ANDROID_PLATFORM;
- //       automationName = "UiAutomator1";
+        //       Configuration.automationType = Configuration.ANDROID_PLATFORM;
+        //       automationName = "UiAutomator1";
     }
 
     @Test
     public void TEST_TESTUI_01() {
-   //     androidAppPath = "src/test/resources/App/LoginApp.apk";
-  //      open();
+        //     androidAppPath = "src/test/resources/App/LoginApp.apk";
+        //      open();
 
 //       E(By.id("textInputEditTextEmail")).
 //               driver.pressKey(new KeyEvent(AndroidKey.ENTER));
@@ -44,6 +44,6 @@ public class TestUITest {
 
     @Test
     public void TEST_TESTUI_02() {
- //       open("https://ru.aliexpress.com/");
+        //       open("https://ru.aliexpress.com/");
     }
 }

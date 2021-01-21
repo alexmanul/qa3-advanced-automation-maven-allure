@@ -6,7 +6,6 @@ import Pages.P101RegistrationPage;
 import Steps.BaseSteps;
 import Utils.DriverSingleton;
 import Utils.TestProperties;
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
