@@ -1,6 +1,7 @@
 package Steps;
 
 import Elements.*;
+import Pages.BasePage;
 import Utils.CommonApproach.ElementReader;
 import Utils.DriverSingleton;
 import Utils.Hooks;
@@ -15,6 +16,7 @@ public class BaseSteps {
             driver, Integer.parseInt(TestProperties.getProperty("selenium.explicit.wait")));
     protected String featureName = Hooks.featureName;
     protected String scenarioName = Hooks.scenarioName;
+    protected BasePage basePage = new BasePage(driver, wait);
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /// BUTTON /////////////////////////////////////////////////////////////////////////////////////////////////////////

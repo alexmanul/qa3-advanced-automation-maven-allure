@@ -9,6 +9,7 @@ import io.cucumber.java.en.And;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
+import org.junit.Assert;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -29,7 +30,11 @@ public class PDFSteps {
     public void deleteFileFromDownloadsDirectory(String filename) {
         String home = System.getProperty("user.home");
         File file = new File(home + "/" + "downloads" + "/" + filename);
-        file.delete();
+        if (file.exists()) {
+            boolean delete = file.delete();
+            log.info("Was file deleted? " + delete);
+            Assert.assertTrue(delete);
+        }
     }
 
     @And("^I download file directly from server$")

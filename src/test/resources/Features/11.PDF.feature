@@ -24,3 +24,4 @@ Feature: QA3 - Advanced Automation. Tests for PDF files
       | 1    | @/PDF/THANK_YOU          |         |
       | 1    | @/PDF/DESCRIPTION       |         |
     Then I verify PDF file content is equal to expected result
+    And  I delete 'lv.png' file from the downloads directory
