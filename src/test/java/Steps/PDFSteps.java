@@ -40,7 +40,7 @@ public class PDFSteps {
     }
 
     @And("^I verify PDF file contains following data$")
-    public void seePDFFileContainsFollowingData(DataTable table) throws Exception {
+    public void verifyPDFFileContainsFollowingData(DataTable table) throws Exception {
         File file = new File("sources/PDF-IC-Basic-Invoice-Template.pdf");
         log.debug(file.getPath());
         String expectedTextAsOneString = "";
@@ -73,9 +73,22 @@ public class PDFSteps {
             context.pageContents = pageContents;
             context.expectedTextAsOneString = expectedTextAsOneString;
         }
-
-
     }
 
+    @And("^I verify PDF file content is equal to expected result$")
+    public void verifyPDFFileContentIsEqualToExpectedResult() {
+        Collection<String> pageContents = new TreeSet<>(context.pageContents);
+        String actualContentAsOneSAtring = "";
+
+        for (String s : pageContents) {
+            actualContentAsOneSAtring = actualContentAsOneSAtring.concat(s + " ");
+        }
+        String actualResult = actualContentAsOneSAtring.replaceAll(" {2}", " ").trim();
+        String expectedResult = context.expectedTextAsOneString.replaceAll(" {2}", " ").trim();
+        log.info(actualResult);
+        log.info(expectedResult);
+
+        CustomAssertions.assertThatEquals(actualResult, expectedResult, "PDF file data is wrong");
+    }
 
 }

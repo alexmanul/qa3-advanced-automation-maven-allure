@@ -15,7 +15,6 @@ public class CardSteps {
     @And("^I validate that deck (has all parameters|is unique)$")
     public void shuffleDeckValidation(String keyword) {
         cardActionHelper.shuffleDeckValidation(keyword);
-
     }
 
     @And("I remember the deck number")

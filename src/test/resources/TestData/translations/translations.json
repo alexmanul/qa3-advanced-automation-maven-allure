@@ -66,17 +66,24 @@
   },
   "PDF": {
     "BASIC_INVOICE": "BASIC INVOICE TEMPLATE",
-    "INVOICE": "INVOICE",
     "DATE": "DATE",
-    "INVOICE_NO": "INVOICE",
+    "INVOICE_NO": "INVOICE NO.",
     "BILL_TO": "BILL TO",
     "SHIP_TO": "SHIP TO",
-    "DESCRIPTION": "DESCRIPTION",
     "TOTAL": "TOTAL",
     "REMARKS": "Remarks / Instructions:",
     "SUBTOTAL": "SUBTOTAL",
     "DISCOUNT": "enter total amount DISCOUNT",
     "SUBTOTAL_LESS": "SUBTOTAL LESS DISCOUNT",
-    "PLEASE_MAKE_CHECK": "Please make check payable to"
+    "TAX_RATE": "enter percentage TAX RATE",
+    "TOTAL_TAX": "TOTAL TAX",
+    "SHIPPING_HANDLING": "SHIPPING/HANDLING",
+    "OTHER_TOTAL": "OTHER TOTAL",
+    "INVOICE": "INVOICE",
+    "FOR_QUESTIONS": "For questions concerning this invoice, please contact",
+    "PAYMENT_DUE_UPON": "Payment due upon receipt.",
+    "PLEASE_MAKE_CHECK": "Please make check payable to",
+    "THANK_YOU": "THANK YOU",
+    "DESCRIPTION": "DESCRIPTION"
   }
 }
