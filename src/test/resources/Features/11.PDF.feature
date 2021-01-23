@@ -1,7 +1,5 @@
-@PDF
 Feature: QA3 - Advanced Automation. Tests for PDF files
 
-  @PDF
   Scenario: PDF01. Check redirection by registration button
     When I verify PDF file contains following data
       | PAGE | LABEL                   | CONTENT |

@@ -2,26 +2,24 @@ package Steps;
 
 import Pages.BasePage;
 import Utils.CustomAssertions;
-import Utils.DriverSingleton;
 import Utils.PDFReader;
+import Utils.Utils;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.*;
 
 @Slf4j
 public class PDFSteps {
 
-    protected final WebDriver driver = DriverSingleton.getInstance();
-    protected final WebDriverWait wait = DriverSingleton.getExplicitWait();
     private final Context context;
-    protected BasePage basePage = new BasePage(driver, wait);
+    private final BasePage basePage = new BasePage();
 
     public PDFSteps(Context context) {
         this.context = context;
@@ -34,9 +32,15 @@ public class PDFSteps {
         file.delete();
     }
 
-    @And("^I download '(.*)' file directly from server$")
-    public void downloadFileDirectlyFromServer(String filename) {
-        //
+    @And("^I download file directly from server$")
+    public void downloadFileDirectlyFromServer() throws MalformedURLException {
+        String home = System.getProperty("user.home");
+        String uniqueSuffix = UUID.randomUUID().toString();
+        String filename = uniqueSuffix + "invoice" + ".pdf";
+        // Replace placeholder to actual url when it is needed
+        URL fileURL = new URL("url");
+        String path = home + "/" + "downloads" + "/" + filename;
+        Utils.saveFile(fileURL, path, context.token);
     }
 
     @And("^I verify PDF file contains following data$")
@@ -83,10 +87,11 @@ public class PDFSteps {
         for (String s : pageContents) {
             actualContentAsOneSAtring = actualContentAsOneSAtring.concat(s + " ");
         }
-        String actualResult = actualContentAsOneSAtring.replaceAll(" {2}", " ").trim();
+
         String expectedResult = context.expectedTextAsOneString.replaceAll(" {2}", " ").trim();
-        log.info(actualResult);
-        log.info(expectedResult);
+        String actualResult = actualContentAsOneSAtring.replaceAll(" {2}", " ").trim();
+        log.info("Expected result: " + expectedResult);
+        log.info("Actual result: " + actualResult);
 
         CustomAssertions.assertThatEquals(actualResult, expectedResult, "PDF file data is wrong");
     }

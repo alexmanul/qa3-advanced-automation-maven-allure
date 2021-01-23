@@ -10,4 +10,5 @@ public class Context {
     public String pdfFileName;
     public Collection<String> pageContents;
     public String expectedTextAsOneString;
+    public String token;
 }

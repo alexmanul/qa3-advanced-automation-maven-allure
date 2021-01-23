@@ -19,12 +19,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class BasePage {
 
-    public final RemoteWebDriver driver;
-    public final WebDriverWait wait;
+    public RemoteWebDriver driver;
+    public WebDriverWait wait;
 
     public BasePage(WebDriver driver, WebDriverWait wait) {
         this.driver = (RemoteWebDriver) driver;
         this.wait = wait;
+    }
+
+    public BasePage() {
+
     }
 
     // ASSERTIONS
