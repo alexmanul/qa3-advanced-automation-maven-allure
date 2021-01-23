@@ -74,7 +74,7 @@ public class TestDataReader extends BaseSteps {
         test.add(folder);
         test.add(file);
         String result = String.join(File.separator, test);
-        log.info("Test data file relative path is " + result);
+        log.debug("Test data file relative path is " + result);
         return result;
     }
 
@@ -85,9 +85,7 @@ public class TestDataReader extends BaseSteps {
     public String getMultipleValuesFromFile(String string) {
         String result = string;
         JSONObject jsonObject = null;
-
         String testDataFileRelativePath = getTestDataSourceFileName();
-
         try {
             jsonObject = new JSONObject(new String(Files.readAllBytes(Paths.get(testDataFileRelativePath))));
         } catch (Exception e) {

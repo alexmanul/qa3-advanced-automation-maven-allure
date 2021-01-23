@@ -15,9 +15,9 @@ import java.io.File;
 @Slf4j
 public class ScreenshotSteps extends BaseSteps {
 
-    private final SharedContext context;
+    private final Context context;
 
-    public ScreenshotSteps(SharedContext context) {
+    public ScreenshotSteps(Context context) {
         this.context = context;
     }
 

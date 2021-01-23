@@ -1,6 +1,6 @@
 package Utils;
 
-import Steps.SharedContext;
+import Steps.Context;
 import io.cucumber.core.api.Scenario;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
@@ -24,13 +24,13 @@ public class Screenshots {
     private final ShootingStrategy RETINA = ShootingStrategies.viewportRetina(1000, 0, 0, 1);
     private final ShootingStrategy SIMPLE = ShootingStrategies.simple();
     WebDriver driver;
-    private SharedContext context;
+    private Context context;
 
     public Screenshots(WebDriver driver) {
         this.driver = driver;
     }
 
-    public Screenshots(WebDriver driver, SharedContext context) {
+    public Screenshots(WebDriver driver, Context context) {
         this.driver = driver;
         this.context = context;
     }

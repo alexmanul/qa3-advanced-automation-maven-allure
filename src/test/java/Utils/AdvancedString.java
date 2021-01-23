@@ -1,6 +1,4 @@
-package Utils.Advanced;
-
-import Utils.TestDataReader;
+package Utils;
 
 public class AdvancedString {
 

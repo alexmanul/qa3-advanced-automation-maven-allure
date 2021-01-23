@@ -5,6 +5,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.net.URL;
@@ -15,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class DriverSingleton {
     private static RemoteWebDriver driver;
+    private static WebDriverWait wait;
     private static ExtentReports extent;
     private static ExtentTest extentTest;
 
@@ -53,6 +55,16 @@ public class DriverSingleton {
             setInstance();
         }
         return driver;
+    }
+
+    public static WebDriverWait getExplicitWait() {
+        if (wait == null) {
+            wait = new WebDriverWait(
+                    DriverSingleton.getInstance(),
+                    Integer.parseInt(TestProperties.getProperty("selenium.explicit.wait"))
+            );
+        }
+        return wait;
     }
 
     public static ExtentTest getExtentTest(String featureName, String scenarioName) {

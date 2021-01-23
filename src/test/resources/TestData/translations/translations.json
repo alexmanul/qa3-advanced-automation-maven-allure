@@ -63,5 +63,20 @@
       "EMAIL": "javagurulv@gmail.com",
       "PHONE": "(+371) 26120960"
     }
+  },
+  "PDF": {
+    "BASIC_INVOICE": "BASIC INVOICE TEMPLATE",
+    "INVOICE": "INVOICE",
+    "DATE": "DATE",
+    "INVOICE_NO": "INVOICE",
+    "BILL_TO": "BILL TO",
+    "SHIP_TO": "SHIP TO",
+    "DESCRIPTION": "DESCRIPTION",
+    "TOTAL": "TOTAL",
+    "REMARKS": "Remarks / Instructions:",
+    "SUBTOTAL": "SUBTOTAL",
+    "DISCOUNT": "enter total amount DISCOUNT",
+    "SUBTOTAL_LESS": "SUBTOTAL LESS DISCOUNT",
+    "PLEASE_MAKE_CHECK": "Please make check payable to"
   }
 }

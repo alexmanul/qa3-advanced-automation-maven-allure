@@ -23,11 +23,11 @@ public class Hooks {
     static String scenarioName;
     private static ExtentTest extentTest;
     final SQLHelper sqlHelper = new SQLHelper();
-    private final SharedContext context;
+    private final Context context;
     private WebDriver driver;
     private ExtentReports extent;
 
-    public Hooks(SharedContext context) {
+    public Hooks(Context context) {
         this.context = context;
     }
 
