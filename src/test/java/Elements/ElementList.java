@@ -4,16 +4,13 @@ import Utils.DriverSingleton;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 @Slf4j
 public class ElementList extends UIElement {
 
-    public ElementList(WebDriver driver, By by) {
-        super(driver, by);
-    }
-
-    public static ElementList get(By by) {
-        return new ElementList(DriverSingleton.getInstance(), by);
+    public ElementList(WebDriver driver, WebDriverWait wait, By by) {
+        super(driver, wait, by);
     }
 
     public int getItemCount() {

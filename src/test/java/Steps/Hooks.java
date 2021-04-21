@@ -4,6 +4,7 @@ import MYSQL.SQLHelper;
 import Utils.CommonApproach.Pages;
 import Utils.DriverSingleton;
 import Utils.Screenshots;
+import Utils.TestProperties;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import io.cucumber.core.api.Scenario;
@@ -11,6 +12,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -33,7 +35,8 @@ public class Hooks {
 
     @Before("@UI")
     public void before(Scenario scenario) {
-        driver = DriverSingleton.getInstance();
+        setDriverAndWaitIntoContext();
+        driver = Context.driver;
         Screenshots screen = new Screenshots(driver);
         scenarioName = screen.getNameOfScenario(scenario);
         featureName = screen.getNameOfFeature(scenario);
@@ -65,5 +68,10 @@ public class Hooks {
     public void createDBTableAgents() throws IOException, SQLException {
         sqlHelper.readSQLFromFile();
         log.info("Database table 'AGENTS' is created");
+    }
+
+    private void setDriverAndWaitIntoContext() {
+        Context.driver = DriverSingleton.getInstance();
+        Context.wait = new WebDriverWait(Context.driver, Integer.parseInt(TestProperties.getProperty("selenium.explicit.wait")));
     }
 }

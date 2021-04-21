@@ -1,17 +1,12 @@
 package Elements;
 
-import Utils.DriverSingleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Dropdown extends UIElement {
 
-    public Dropdown(WebDriver driver, By by) {
-        super(driver, by);
+    public Dropdown(WebDriver driver, WebDriverWait wait, By by) {
+        super(driver, wait, by);
     }
-
-    public static Dropdown get(By by) {
-        return new Dropdown(DriverSingleton.getInstance(), by);
-    }
-
 }

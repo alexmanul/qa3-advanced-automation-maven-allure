@@ -24,6 +24,6 @@ public class P100MainPage extends BasePage implements Menu, Header, PreFooter, F
 
     @ElementId(id = "P100_REGISTER_BUTTON")
     public Button topAskQuestionButton() {
-        return Button.get(By.cssSelector("div > div > div > div > div > a"));
+        return new Button(driver, wait, By.cssSelector("div > div > div > div > div > a"));
     }
 }

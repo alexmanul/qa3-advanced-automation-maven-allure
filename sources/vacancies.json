@@ -1,0 +1,2096 @@
+{
+  "VacancyList": {
+    "generated": "2021-01-26T00:50:39",
+    "xmlns": "urn:EasyCruit",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "xsi:schemaLocation": "http://www.easycruit.com/dtd/vacancy-list.xsd",
+    "Vacancy": [
+      {
+        "id": "2625687",
+        "date_start": "2021-01-06",
+        "date_end": "2021-01-31",
+        "reference_number": "611043701",
+        "Versions": {
+          "Version": [
+            {
+              "language": "lv",
+              "Title": "BI Konsultants(-e) ",
+              "TitleHeading": "Aicinām Tevi pievienoties VISMA Enterprise komandai!",
+              "AlternativeCompanyName": "SIA Visma Enterprise",
+              "ApplicationDeadline": "31.01.2021",
+              "Location": "Rīga, Sporta iela 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvija",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Pastāvīgs darbs"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Diena"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "142687",
+              "Name": "VE: BI konsultācijas un atbalsts",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2625687/142687",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2625687/142687"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2626273",
+        "date_start": "2021-01-07",
+        "date_end": "2021-01-31",
+        "reference_number": "041047936",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "People Operations Consultant",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "SIA Visma Labs",
+              "ApplicationDeadline": "29/01/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": "15/02/2021",
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38093",
+                    "text": "Payroll and HR"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2626273/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2626273/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2628453",
+        "date_start": "2021-01-11",
+        "date_end": "2021-01-31",
+        "reference_number": "932581946",
+        "Versions": {
+          "Version": [
+            {
+              "language": "lv",
+              "Title": "Sistēmanalītiķis/-e",
+              "TitleHeading": "Aicinām Tevi pievienoties VISMA Consulting komandai!",
+              "AlternativeCompanyName": "Visma Consulting",
+              "ApplicationDeadline": "31.01.2021",
+              "Location": "Rīga, Sporta iela 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvija",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": null
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140911",
+              "Name": "Visma Consulting SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2628453/140911",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2628453/140911"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2631547",
+        "date_start": "2021-01-15",
+        "date_end": "2021-02-01",
+        "reference_number": "891230242",
+        "Versions": {
+          "Version": [
+            {
+              "language": "lv",
+              "Title": "Grāmatveža palīgs",
+              "TitleHeading": null,
+              "AlternativeCompanyName": "Visma Labs SIA",
+              "ApplicationDeadline": "01.02.2021",
+              "Location": "Rīga, Sporta iela 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvija",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "46247",
+                    "text": "Administratīvais darbs / Asistēšana"
+                  },
+                  {
+                    "type": "position-type",
+                    "id": "38091",
+                    "text": "Finanses / Grāmatvedība"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "trainee",
+                    "text": "Praktikants"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "parttime",
+                    "text": "Nepilna laika"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Diena"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2631547/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2631547/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2624441",
+        "date_start": "2021-01-04",
+        "date_end": "2021-02-14",
+        "reference_number": "014604103",
+        "Versions": {
+          "Version": [
+            {
+              "language": "lv",
+              "Title": "Testēšanas inženieris",
+              "TitleHeading": "Aicinām Tevi pievienoties VISMA Enterprise komandai!",
+              "AlternativeCompanyName": "SIA Visma Enterprise",
+              "ApplicationDeadline": "14.02.2021",
+              "Location": "Rīga, Sporta iela 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvija",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "Informācijas tehnoloģijas"
+                  },
+                  {
+                    "type": "position-type",
+                    "id": "46269",
+                    "text": "Tehniskās zinātnes"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Pastāvīgs darbs"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Pilna laika"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Diena"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140909",
+              "Name": "Visma Enterprise",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2624441/140909",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2624441/140909"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2632981",
+        "date_start": "2021-01-19",
+        "date_end": "2021-02-14",
+        "reference_number": "021144853",
+        "Versions": {
+          "Version": [
+            {
+              "language": "lv",
+              "Title": "IT RISINĀJUMU ARHITEKTS/E",
+              "TitleHeading": "Aicinām Tevi pievienoties Visma komandai!",
+              "AlternativeCompanyName": "Visma Consulting",
+              "ApplicationDeadline": "14.02.2021",
+              "Location": "Rīga, Sporta iela 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvija",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": null
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140911",
+              "Name": "Visma Consulting SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2632981/140911",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2632981/140911"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2632995",
+        "date_start": "2021-01-19",
+        "date_end": "2021-02-14",
+        "reference_number": "893426744",
+        "Versions": {
+          "Version": [
+            {
+              "language": "lv",
+              "Title": "Programmētājs/a",
+              "TitleHeading": "Aicinām Tevi pievienoties Visma komandai!",
+              "AlternativeCompanyName": "Visma Consulting",
+              "ApplicationDeadline": "14.02.2021",
+              "Location": "Rīga, Sporta iela 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvija",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": null
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140911",
+              "Name": "Visma Consulting SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2632995/140911",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2632995/140911"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2634939",
+        "date_start": "2021-01-21",
+        "date_end": "2021-02-14",
+        "reference_number": "640600802",
+        "Versions": {
+          "Version": [
+            {
+              "language": "lv",
+              "Title": "Klientu konsultants(-e) darbam ar ERP HORIZON",
+              "TitleHeading": "Aicinām Tevi pievienoties VISMA Enterprise komandai!",
+              "AlternativeCompanyName": "SIA Visma Enterprise",
+              "ApplicationDeadline": "14.02.2021",
+              "Location": "Rīga, Sporta iela 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvija",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": null
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140909",
+              "Name": "Visma Enterprise",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2634939/140909",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2634939/140909"
+            },
+            {
+              "id": "140937",
+              "Name": "Visma Enterprise: Piegāde",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2634939/140937",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2634939/140937"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2579499",
+        "date_start": "2020-10-05",
+        "date_end": "2021-02-15",
+        "reference_number": "486225289",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Senior Business Intelligence developer ",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Maldugunu street 2",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2579499/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2579499/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2368723",
+        "date_start": "2020-10-08",
+        "date_end": "2021-02-15",
+        "reference_number": "649703965",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Salesforce developer",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2368723/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2368723/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2586133",
+        "date_start": "2020-10-16",
+        "date_end": "2021-02-15",
+        "reference_number": "119626872",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": ".NET Developer",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2586133/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2586133/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2599683",
+        "date_start": "2020-11-11",
+        "date_end": "2021-02-15",
+        "reference_number": "078614520",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Consultant with Norwegian Language",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2599683/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2599683/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2607523",
+        "date_start": "2020-11-25",
+        "date_end": "2021-02-15",
+        "reference_number": "062651177",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "BI developer ",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2607523/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2607523/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2612089",
+        "date_start": "2020-12-04",
+        "date_end": "2021-02-15",
+        "reference_number": "717267843",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Front-end Developer",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2612089/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2612089/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2614651",
+        "date_start": "2020-12-09",
+        "date_end": "2021-02-15",
+        "reference_number": "285761427",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Back-end .NET Developer",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2614651/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2614651/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2614673",
+        "date_start": "2020-12-09",
+        "date_end": "2021-02-15",
+        "reference_number": "301037021",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Full-stack .NET Developer",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2614673/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2614673/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2620103",
+        "date_start": "2020-12-18",
+        "date_end": "2021-02-15",
+        "reference_number": "741936373",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": ".NET Core Developer",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2620103/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2620103/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2622291",
+        "date_start": "2020-12-23",
+        "date_end": "2021-02-15",
+        "reference_number": "488045260",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Back-end .NET Developer",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2622291/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2622291/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2622949",
+        "date_start": "2020-12-28",
+        "date_end": "2021-02-15",
+        "reference_number": "718297450",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Swedish speaking Integration Specialist",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2622949/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2622949/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2622955",
+        "date_start": "2020-12-28",
+        "date_end": "2021-02-15",
+        "reference_number": "335935761",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Norwegian Speaking Support Consultant",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2622955/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2622955/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2623041",
+        "date_start": "2020-12-28",
+        "date_end": "2021-02-15",
+        "reference_number": "619351777",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Senior Developer (Fullstack)",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2623041/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2623041/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2623045",
+        "date_start": "2020-12-28",
+        "date_end": "2021-02-15",
+        "reference_number": "291784121",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Senior Front-end Developer",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2623045/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2623045/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2623093",
+        "date_start": "2020-12-28",
+        "date_end": "2021-02-15",
+        "reference_number": "306936108",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Lead .NET Developer / Team Lead ",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2623093/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2623093/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2623103",
+        "date_start": "2020-12-28",
+        "date_end": "2021-02-15",
+        "reference_number": "629610852",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Senior .NET Developer (Back-end)",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2623103/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2623103/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2623123",
+        "date_start": "2020-12-28",
+        "date_end": "2021-02-15",
+        "reference_number": "139980978",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": " .NET Developer (Back-end)",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2623123/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2623123/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2624885",
+        "date_start": "2021-01-05",
+        "date_end": "2021-02-15",
+        "reference_number": "732819759",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Infrastructure Engineer",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2624885/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2624885/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2626133",
+        "date_start": "2021-01-07",
+        "date_end": "2021-02-15",
+        "reference_number": "793616160",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Technical Quality Assurer",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2626133/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2626133/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2629921",
+        "date_start": "2021-01-13",
+        "date_end": "2021-02-15",
+        "reference_number": "134662319",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Full-stack Developer (focus on front-end)",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2629921/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2629921/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2630177",
+        "date_start": "2021-01-13",
+        "date_end": "2021-02-15",
+        "reference_number": "866564438",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Test Engineer",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2630177/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2630177/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2633987",
+        "date_start": "2021-01-20",
+        "date_end": "2021-02-15",
+        "reference_number": "026212054",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Data & Usability Analyst",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2633987/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2633987/140913"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2634011",
+        "date_start": "2021-01-20",
+        "date_end": "2021-02-15",
+        "reference_number": "074645467",
+        "Versions": {
+          "Version": [
+            {
+              "language": "en",
+              "Title": "Full-stack .NET Developer",
+              "TitleHeading": "This is your opportunity. Bring your talent to Visma!",
+              "AlternativeCompanyName": "Visma Labs",
+              "ApplicationDeadline": "15/02/2021",
+              "Location": "Riga, Sporta street 11",
+              "Engagement": null,
+              "DailyHours": null,
+              "Region": {
+                "Country": [
+                  {
+                    "id": "117",
+                    "name": "Latvia",
+                    "County": [
+                      {
+                        "id": "595",
+                        "text": "Rīgas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Categories": {
+                "Item": [
+                  {
+                    "type": "position-type",
+                    "id": "38097",
+                    "text": "IT and Software"
+                  },
+                  {
+                    "type": "duration",
+                    "id": "permanent",
+                    "text": "Permanent"
+                  },
+                  {
+                    "type": "extent",
+                    "id": "fulltime",
+                    "text": "Full-time"
+                  },
+                  {
+                    "type": "operating-time",
+                    "id": "day",
+                    "text": "Day"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "Departments": {
+          "Department": [
+            {
+              "id": "140913",
+              "Name": "Visma Labs SIA",
+              "LogoURL": "https://visma.easycruit.com/images/logo/37648/Digital_Visma_logo.png",
+              "ImageURL": "https://visma.easycruit.com/images/image/37648/18_09_27_-_vsm_-06673-b-2.jpg",
+              "VacancyURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/2634011/140913",
+              "ApplicationURL": "https://visma.easycruit.com/intranet/vismalatvia/vacancy/application/2634011/140913"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

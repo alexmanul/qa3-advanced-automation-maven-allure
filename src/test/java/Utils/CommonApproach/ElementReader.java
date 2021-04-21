@@ -29,7 +29,7 @@ public class ElementReader {
         for (Method method : pageClass.getDeclaredMethods()) {
             if (method.isAnnotationPresent(ElementId.class)) {
                 ElementId annotation = method.getAnnotation(ElementId.class);
-                log.info("Annotation is " + annotation.id());
+                log.debug("Annotation is " + annotation.id());
 
                 if (annotation.id().equals(idAnnotation)) {
                     log.debug("Method name " + method.getName());

@@ -1,9 +1,6 @@
 package Steps;
 
-import Elements.Button;
-import Elements.Checkbox;
-import Elements.RadioButton;
-import Elements.UIElement;
+import Elements.*;
 import Pages.BasePage;
 import Pages.P100MainPage;
 import Utils.CommonApproach.ElementReader;
@@ -159,6 +156,12 @@ public class CommonSteps extends BaseSteps {
             default:
                 throw new Exception("Case is not defined for " + condition);
         }
+    }
+
+    @And("^I see '(.*)' elements from '(.*)' element list on '(.*)' page$")
+    public void seeElementsFromElementList(int elementCount, String element, String page) throws Exception {
+        CustomAssertions.assertThatEquals(new ElementReader(page).getUIElement(element, ElementList.class).getItemCount(),
+                elementCount, "Element count is wrong in element list " + element);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

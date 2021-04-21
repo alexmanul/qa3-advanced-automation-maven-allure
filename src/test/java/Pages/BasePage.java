@@ -48,7 +48,7 @@ public class BasePage {
     }
 
     public void waitPageIsLoaded() {
-        new Button(driver, By.cssSelector("")).waitPageIsLoaded();
+        new Button(driver, wait, By.cssSelector("")).waitPageIsLoaded();
     }
 
     public void switchBrowserTab(int browserTabNumber) {

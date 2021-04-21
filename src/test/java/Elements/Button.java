@@ -1,16 +1,17 @@
 package Elements;
 
-import Utils.DriverSingleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Button extends UIElement {
 
-    public Button(WebDriver driver, By by) {
-        super(driver, by);
+
+    public Button(WebDriver driver, WebDriverWait wait, By by) {
+        super(driver, wait, by);
     }
 
-    public static Button get(By by) {
-        return new Button(DriverSingleton.getInstance(), by);
+    public void click() {
+        waitAndClick();
     }
 }

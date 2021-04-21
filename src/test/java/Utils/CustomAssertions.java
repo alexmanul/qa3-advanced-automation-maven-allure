@@ -13,6 +13,10 @@ public class CustomAssertions {
                 .isEqualTo(TestDataReader.getDataFromFile(Utils.getSpecificDate(expected)).trim());
     }
 
+    public static void assertThatEquals(int actual, int expected, String exceptionMessage) {
+        assertThatEquals(String.valueOf(actual), String.valueOf(expected), exceptionMessage);
+    }
+
     public static void assertThatContains(String actual, String expected, String exceptionMessage) {
         assertThat(actual).as(exceptionMessage)
                 .contains(TestDataReader.getDataFromFile(Utils.getSpecificDate(expected)).trim());

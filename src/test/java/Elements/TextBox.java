@@ -3,15 +3,12 @@ package Elements;
 import Utils.DriverSingleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TextBox extends UIElement {
 
-    public TextBox(WebDriver driver, By by) {
-        super(driver, by);
-    }
-
-    public static TextBox get(By by) {
-        return new TextBox(DriverSingleton.getInstance(), by);
+    public TextBox(WebDriver driver, WebDriverWait wait, By by) {
+        super(driver, wait, by);
     }
 
     public void setValue(String string) {

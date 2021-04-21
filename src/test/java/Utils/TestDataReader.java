@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class TestDataReader extends BaseSteps {
         String testDataRelativePath = getTestDataSourceFileName();
         try {
             byte[] data = Files.readAllBytes(Paths.get(testDataRelativePath));
-            jsonObject = new JSONObject(new String(data, "UTF-8"));
+            jsonObject = new JSONObject(new String(data, StandardCharsets.UTF_8));
         } catch (Exception e) {
             log.error("Test data json file is not found");
         }
@@ -41,16 +42,19 @@ public class TestDataReader extends BaseSteps {
 
         if (matcher.find()) {
             try {
+                log.info("\nMatcher group 1: " + matcher.group(1).substring(1));
                 jsonObject.query(matcher.group(1).substring(1));
             } catch (NullPointerException npe) {
                 throw new NullPointerException("Json key " + key + " is not found in " + getTestDataSourceFileName());
             }
             result = result.replace(matcher.group(1), jsonObject.query(matcher.group(1).substring(1)).toString());
+            log.info("\nResult before loop: " + result);
             while (matcher.find()) {
                 result = result.replace(matcher.group(1), jsonObject.query(matcher.group(1).substring(1)).toString());
+                log.info("\nResult in the loop: " + result);
             }
         }
-        log.debug("Original value: " + key + ", Converted value: " + result);
+        log.info("Original value: " + key + ", Converted value: " + result);
         return result;
     }
 

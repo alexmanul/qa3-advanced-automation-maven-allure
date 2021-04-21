@@ -1,7 +1,6 @@
 package Elements;
 
 import Utils.TestDataReader;
-import Utils.TestProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -22,16 +21,16 @@ public abstract class UIElement {
     ///// CONSTRUCTORS /////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public UIElement(WebDriver driver, By by) {
-        this.by = by;
+    public UIElement(WebDriver driver, WebDriverWait wait, By by) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Integer.parseInt(TestProperties.getProperty("selenium.explicit.wait")));
+        this.wait = wait;
+        this.by = by;
     }
 
-    public UIElement(WebDriver driver, WebElement element) {
-        this.element = element;
+    public UIElement(WebDriver driver, WebDriverWait wait, WebElement element) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Integer.parseInt(TestProperties.getProperty("selenium.explicit.wait")));
+        this.wait = wait;
+        this.element = element;
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
