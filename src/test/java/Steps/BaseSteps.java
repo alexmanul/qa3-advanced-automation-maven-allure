@@ -105,4 +105,20 @@ public class BaseSteps {
     protected void executeMethod(String page, String method) throws Exception {
         new ElementReader(page).executeMethod(method);
     }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// ELEMENT ////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    protected UIElement uiElement(String page, String element) throws Exception {
+        return new ElementReader(page).getUIElement(element, UIElement.class);
+    }
+
+    protected UIElement uiElementWithVariable(String page, String element, Object variable) throws Exception {
+        return new ElementReader(page).getUIElementWithVariables(element, UIElement.class, variable);
+    }
+
+    protected UIElement uiElementWithTwoVariables(String page, String element, int var1, int var2) throws Exception {
+        return new ElementReader(page).getUIElementWithVariables(element, UIElement.class, var1, var2);
+    }
 }

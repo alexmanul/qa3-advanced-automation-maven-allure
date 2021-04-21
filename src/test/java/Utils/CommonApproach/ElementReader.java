@@ -65,7 +65,7 @@ public class ElementReader {
     }
 
     //noinspection
-    public <T extends UIElement> T getUIElementWithVariables(String annotation, Class<T> elementType, Object variableType) throws Exception {
+    public <T extends UIElement> T getUIElementWithVariables(String annotation, Class<T> elementType, Object... variableType) throws Exception {
         Method method = getMethod(annotation);
         //noinspection unchecked
         return (T) method.invoke(page, variableType);

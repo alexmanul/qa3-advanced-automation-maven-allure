@@ -5,10 +5,12 @@ import Pages.BasePage;
 import Pages.P100MainPage;
 import Utils.CommonApproach.ElementReader;
 import Utils.CustomAssertions;
+import Utils.TestDataReader;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import lombok.extern.slf4j.Slf4j;
+import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.Dimension;
 
 import java.util.List;
@@ -28,7 +30,7 @@ public class CommonSteps extends BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @And("^I see expected result by executing '(.*)' method on the '(.*)' page$")
-    public void ISeeExpectedResultByExecutingMethod(String method, String page) throws Exception {
+    public void seeExpectedResultByExecutingMethod(String method, String page) throws Exception {
         new ElementReader(page).executeMethod(method);
     }
 
@@ -37,13 +39,13 @@ public class CommonSteps extends BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @And("^I navigate to JAVAGURU.LV website$")
-    public void INavigateToJGWebsite() {
+    public void navigateToJGWebsite() {
         mainPage.navigateToPortal();
         mainPage.waitPageIsLoaded();
     }
 
     @And("^I navigate to '(.*)' page with '(.*)' device$")
-    public void INavigateToPage(String url, String device) {
+    public void navigateToPage(String url, String device) {
         driver.navigate().to(url);
         if (device.equals("MOBILE")) {
             driver.manage().window().setSize(new Dimension(400, 720));
@@ -57,32 +59,32 @@ public class CommonSteps extends BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @And("^I see browser title is '(.*)'$")
-    public void ISeeBrowserTitle(String title) {
+    public void seeBrowserTitle(String title) {
         CustomAssertions.assertThatEquals(driver.getTitle(), title, "Browser title is wrong");
     }
 
     // SEE - DO NOT SEE
 
     @And("^I see '(.*)' element on the '(.*)' page$")
-    public void ISeeElementOnThePage(String element, String page) throws Exception {
+    public void seeElementOnThePage(String element, String page) throws Exception {
         new ElementReader(page).getUIElement(element, UIElement.class).isDisplayed();
     }
 
     @And("^I do not see '(.*)' element on the '(.*)' page$")
-    public void IDoNotSeeElementOnThePage(String title, String page) throws Exception {
+    public void doNotSeeElementOnThePage(String title, String page) throws Exception {
         new ElementReader(page).getUIElement(title, UIElement.class).isNotDisplayed();
     }
 
     // EQUALS
 
     @And("^I see text '(.*)' for '(.*)' element on the '(.*)' page$")
-    public void ISeeTextForElementOnThePage(String text, String element, String page) throws Exception {
+    public void seeTextForElementOnThePage(String text, String element, String page) throws Exception {
         CustomAssertions.assertThatEquals(new ElementReader(page).getUIElement(element, UIElement.class).getValue(),
                 text, "Element " + element + " text is wrong");
     }
 
     @And("^I see text '(.*)' for element by '(.*)' number on the '(.*)' page$")
-    public void ISeeTextForElementByNumberOnThePage(String text, int number, String element, String page) throws Exception {
+    public void seeTextForElementByNumberOnThePage(String text, int number, String element, String page) throws Exception {
         CustomAssertions.assertThatEquals(new ElementReader(page).getUIElementWithVariables(element, UIElement.class, number).getValue(),
                 text, "Text is wrong for element " + element + " and index " + number);
     }
@@ -90,13 +92,13 @@ public class CommonSteps extends BaseSteps {
     // CONTAINS
 
     @And("^I see text for '(.*)' element contains text '(.*)' on the '(.*)' page$")
-    public void ISeeTextForElementContainsTextOnThePage(String element, String text, String page) throws Exception {
+    public void seeTextForElementContainsTextOnThePage(String element, String text, String page) throws Exception {
         CustomAssertions.assertThatContains(new ElementReader(page).getUIElement(element, UIElement.class).getValue(),
                 text, "Element " + element + " text is wrong");
     }
 
     @And("^I see text for '(.*)' element by '(.*)' number contains text '(.*)' on the '(.*)' page$")
-    public void ISeeTextForElementByNumberContainsTextOnThePage(String element, int number, String text, String page) throws Exception {
+    public void seeTextForElementByNumberContainsTextOnThePage(String element, int number, String text, String page) throws Exception {
         CustomAssertions.assertThatContains(new ElementReader(page).getUIElementWithVariables(element, UIElement.class, number).getValue(),
                 text, "Text is wrong for element " + element + " and index " + number);
     }
@@ -106,7 +108,7 @@ public class CommonSteps extends BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @And("^I see following elements on the '(.*)' page$")
-    public void ISeeFollowingElementsOnThePage(String page, DataTable table) throws Exception {
+    public void seeFollowingElementsOnThePage(String page, DataTable table) throws Exception {
         List<Map<String, String>> data = table.asMaps();
         for (Map<String, String> row : data) {
             CustomAssertions.assertThatTrue(
@@ -131,8 +133,39 @@ public class CommonSteps extends BaseSteps {
 
     }
 
+    @And("^I softly see following elements on the '(.*)' page$")
+    public void softlySeeFollowingElementsOnThePage(String page, DataTable table) throws Exception {
+        List<Map<String, String>> data = table.asMaps();
+        SoftAssertions checkElementVisibility = new SoftAssertions();
+
+        // Always check is element is displayed
+        for (int i = 0; i < data.size(); i++) {
+            checkElementVisibility.assertThat(uiElement(page, data.get(i).get("ELEMENT")).isDisplayed())
+                    .as("Element " + i + " is not displayed").isTrue();
+        }
+        checkElementVisibility.assertAll();
+
+        // If LABEL column is present then assert translations
+        SoftAssertions checkLabels = new SoftAssertions();
+        for (int i = 0; i < data.size(); i++) {
+            for (Map<String, String> row : data) {
+                if (row.get("LABEL").startsWith("*")) {
+                    String label = row.get("LABEL").replace("*", "");
+                    checkLabels.assertThat(uiElement(page, row.get("ELEMENT")).getValue())
+                            .as("Element " + row.get("ELEMENT") + " label is wrong")
+                            .contains(TestDataReader.getDataFromFile(label));
+                } else if (!row.get("LABEL").isEmpty()) {
+                    checkLabels.assertThat(uiElement(page, row.get("ELEMENT")).getValue())
+                            .as("Element " + row.get("ELEMENT") + " label is wrong")
+                            .isEqualTo(TestDataReader.getDataFromFile(row.get("LABEL")).trim());
+                }
+            }
+        }
+        checkLabels.assertAll();
+    }
+
     @And("^I see '(.*)' element is '(.*)' on the '(.*)' page$")
-    public void ISeeElementIsConditionOnThePage(String element, String condition, String page) throws Exception {
+    public void seeElementIsConditionOnThePage(String element, String condition, String page) throws Exception {
         switch (condition.toLowerCase()) {
             case "enabled":
                 if (!button(page, element).isEnabled()) {
@@ -169,12 +202,12 @@ public class CommonSteps extends BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @And("^I click on '(.*)' element on the '(.*)' page$")
-    public void IClickOnIcon(String title, String page) throws Exception {
+    public void clickOnElementOnThePage(String title, String page) throws Exception {
         new ElementReader(page).getUIElement(title, UIElement.class).click();
     }
 
     @And("^I click on '(.*)' element containing '(.*)' text on the '(.*)' page$")
-    public void IClickOnElementContainingTextOnThePage(String element, String text, String page) throws Exception {
+    public void clickOnElementContainingTextOnThePage(String element, String text, String page) throws Exception {
         new ElementReader(page).getUIElementWithVariables(element, UIElement.class, text).click();
     }
 
@@ -187,22 +220,22 @@ public class CommonSteps extends BaseSteps {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @And("^I wait for '(.*)' seconds$")
-    public void IWaitForSomeSeconds(int seconds) throws Exception {
+    public void waitForSomeSeconds(int seconds) throws Exception {
         basePage.manualWait(seconds);
     }
 
     @And("^I refresh the page$")
-    public void IRefreshThePage() {
+    public void refreshThePage() {
         driver.navigate().refresh();
     }
 
     @And("^I switch to '(.*)' browser tab$")
-    public void ISwitchToBrowserTab(int tabNumber) {
+    public void switchToBrowserTab(int tabNumber) {
         basePage.switchBrowserTab(tabNumber);
     }
 
     @And("^I see page url is '(.*)'$")
-    public void ISeePageUrl(String url) {
+    public void seePageUrl(String url) {
         basePage.waitPageIsLoaded();
         CustomAssertions.assertThatEquals(driver.getCurrentUrl(), url, "Page URL is wrong");
     }

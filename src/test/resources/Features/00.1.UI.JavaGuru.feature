@@ -6,6 +6,15 @@ Feature: QA3 - Advanced Automation. Tests for JavaGuru website
     When I navigate to JAVAGURU.LV website
     And I see 'MENU_JAVAGURU_LOGO' element on the 'P100' page
     And I click on 'P100_REGISTER_BUTTON' element on the 'P100' page
+    And I softly see following elements on the 'P101' page
+      | ELEMENT                | LABEL                  |
+      | MENU_JAVAGURU_LOGO     |                        |
+      | P101_SCREEN_TITLE      | @/REGISTER/RU/TITLE    |
+      | P101_SCREEN_SUBTITLE_1 | @/REGISTER/RU/SUBTITLE |
+      | P101_JG_BONUSES_CARD_1 | @/REGISTER/RU/PROS/0/1 |
+      | P101_JG_BONUSES_CARD_2 | @/REGISTER/RU/PROS/1/2 |
+      | P101_JG_BONUSES_CARD_3 | @/REGISTER/RU/PROS/2/3 |
+      | P101_JG_BONUSES_CARD_4 | @/REGISTER/RU/PROS/3/4 |
     Then I see following elements on the 'P101' page
       | ELEMENT                | LABEL                  |
       | MENU_JAVAGURU_LOGO     |                        |
